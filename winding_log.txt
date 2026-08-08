@@ -1,0 +1,10 @@
+=== Setup windings ===
+spiral start (30.000,-15.000) end (83.641,-71.856)
+GetFaceByPosition test on coil body center-top: face=None tag=none at (-85.4,-1.1,0.2)
+=== Tx1 -> Coil1 ===
+Tx1 start face=None end face=None
+  skipping (faces not found)
+=== Tx2 -> Coil2 ===
+Tx2 start face=None end face=None
+  skipping (faces not found)
+=== Rx -> Coil3 ===
