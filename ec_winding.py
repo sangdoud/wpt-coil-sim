@@ -56,7 +56,7 @@ else:
 
 # 3) 求解
 try:
-    m3d.analyze(cores=4, blocking=True)
+    m3d.analyze(cores=8, blocking=True)
     print("ANALYZE CALLED")
 except Exception as e:
     print("ANALYZE ERR:", repr(e))

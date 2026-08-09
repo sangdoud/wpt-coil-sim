@@ -79,7 +79,7 @@ for dx in todo:
         except Exception as e:
             log("move err: %s" % repr(e))
     try:
-        m3d.analyze(cores=4, run_in_thread=True)
+        m3d.analyze(cores=8, run_in_thread=True)
     except Exception as e:
         log("analyze err: %s" % repr(e))
     solved = False

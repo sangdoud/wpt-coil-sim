@@ -90,7 +90,7 @@ try:
 except Exception as e:
     print("stop err:", repr(e), flush=True)
 try:
-    m3d.analyze(cores=4, run_in_thread=True)
+    m3d.analyze(cores=8, run_in_thread=True)
     print("solve triggered", flush=True)
 except Exception as e:
     print("analyze err:", repr(e), flush=True)

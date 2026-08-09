@@ -237,7 +237,7 @@ if len(winding_names) == 3:
 # 9) 求解
 print("solving...")
 try:
-    dst.analyze(cores=4, blocking=True)
+    dst.analyze(cores=8, blocking=True)
     print("ANALYZE DONE")
 except Exception as e:
     print("ANALYZE ERR:", repr(e))

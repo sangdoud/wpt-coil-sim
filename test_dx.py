@@ -20,7 +20,7 @@ def set_dx(target):
 # 测 dx=0
 set_dx(0)
 try:
-    m3d.analyze(cores=4, run_in_thread=True)
+    m3d.analyze(cores=8, run_in_thread=True)
 except Exception as e:
     print("analyze err:", repr(e), flush=True)
 solved = False
@@ -59,7 +59,7 @@ else:
 # 测 dx=-50
 set_dx(-50)
 try:
-    m3d.analyze(cores=4, run_in_thread=True)
+    m3d.analyze(cores=8, run_in_thread=True)
 except Exception as e:
     print("analyze err:", repr(e), flush=True)
 solved2 = False

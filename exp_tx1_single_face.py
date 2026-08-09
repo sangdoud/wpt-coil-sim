@@ -38,7 +38,7 @@ except Exception as e:
 
 # --- 求解 ---
 try:
-    m3d.analyze(cores=4, blocking=True)
+    m3d.analyze(cores=8, blocking=True)
     print("ANALYZE DONE")
     # 尝试读矩阵
     try:

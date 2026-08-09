@@ -73,7 +73,7 @@ for dx in DXS:
 
     # 求解（触发+轮询，保持连接）
     try:
-        m3d.analyze(cores=4, run_in_thread=True)
+        m3d.analyze(cores=8, run_in_thread=True)
     except Exception as e:
         print("analyze err:", repr(e), flush=True)
     solved = False
