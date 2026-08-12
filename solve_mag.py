@@ -4,15 +4,15 @@ from ansys.aedt.core.modules.boundary.maxwell_boundary import MatrixMagnetostati
 
 DESIGN = "WPT_G"
 d = Desktop(version="2024.1", new_desktop=False, non_graphical=False,
-            close_on_exit=False, aedt_process_id=8016)
+            close_on_exit=False)
 m3d = Maxwell3d(project="Projecttonight", design=DESIGN)
 print("current solution:", m3d.solution_type, flush=True)
 
-# 铁氧体：电导率 0，磁导率 1000（Magnetostatic 只关心磁导率）
+# 铁氧体：电导率 0，磁导率 300（Magnetostatic 只关心磁导率）
 try:
     m3d.materials["ferrite"].conductivity.value = 0
-    m3d.materials["ferrite"].permeability.value = 1000
-    print("ferrite set (mu=1000, cond=0)", flush=True)
+    m3d.materials["ferrite"].permeability.value = 300
+    print("ferrite set (mu=300, cond=0)", flush=True)
 except Exception as e:
     print("mat err:", repr(e), flush=True)
 
