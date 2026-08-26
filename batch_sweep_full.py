@@ -289,15 +289,33 @@ def solve_and_extract(d, m3d, W, G, dx, tg, mu):
         m3d.analyze(cores=CORES, run_in_thread=True)
     except Exception as e:
         log("analyze err: %s" % repr(e))
+    w = ["Winding_Tx1", "Winding_Tx2", "Winding_Rx"]
     solved = False
+    err_streak = 0
     for i in range(90):
         time.sleep(20)
         try:
             solved = m3d.setups[0].is_solved
+            err_streak = 0
         except Exception as e:
-            log("poll err: %s" % repr(e))
+            err_streak += 1
+            log("poll err(%d): %s" % (err_streak, repr(e)))
         if solved:
             break
+        # is_solved 连续报错（GetAvailableReportTypes 在部分模型不稳定）：
+        # 直接尝试提取矩阵验证是否已解，成功即视为完成
+        if err_streak >= 3:
+            log("  is_solved 查询异常，直接尝试提取验证")
+            try:
+                data = m3d.post.get_solution_data(
+                    expressions=["Lmatrix.L(%s,%s)" % (wi, wj) for wi in w for wj in w],
+                    setup_sweep_name="Setup1 : LastAdaptive")
+                real, _ = data.full_matrix_real_imag
+                solved = True
+                break
+            except Exception as e2:
+                log("  extract probe err: %s" % repr(e2)[:120])
+                err_streak = 0   # 尚未解完，继续等待
     if not solved:
         log("  FAILED W=%.1f G=%.1f dx=%3d tg=%3d mu=%.0f" % (W, G, dx, tg, mu))
         try:
@@ -306,7 +324,6 @@ def solve_and_extract(d, m3d, W, G, dx, tg, mu):
         except Exception:
             pass
         return False
-    w = ["Winding_Tx1", "Winding_Tx2", "Winding_Rx"]
     data = None
     for attempt in range(3):
         try:
