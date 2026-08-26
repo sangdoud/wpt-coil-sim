@@ -5,6 +5,8 @@
 
 # AEDT 项目文件（含求解结果，24-50MB。想传就把这行删掉）
 *.aedt
+!Projecttonight.aedt
+
 
 # 日志
 *.log
