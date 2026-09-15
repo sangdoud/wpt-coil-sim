@@ -81,12 +81,18 @@ if ($LASTEXITCODE -ne 0) {
 Write-Log '推送成功'
 
 # ---------- 6. 大文件护栏：GitHub 单文件硬上限 100MB ----------
+# 用 git 对象库取大小（git ls-tree -r -l），不访问文件系统 ——
+# 避免 git 对非 ASCII 文件名输出的 "4 - \345\211\257..." 转义形式把 Test-Path 打挂。
 try {
     $limit = 95MB
-    foreach ($f in (git ls-files)) {
-        $p = Join-Path $Repo $f
-        if ((Test-Path -LiteralPath $p) -and ((Get-Item -LiteralPath $p).Length -gt $limit)) {
-            Write-Log "警告：已跟踪文件接近 GitHub 100MB 上限 -> $f"
+    foreach ($line in (git ls-tree -r -l HEAD)) {
+        $parts = $line -split "`t", 2
+        if ($parts.Count -lt 2) { continue }
+        $meta = @(($parts[0] -split '\s+') | Where-Object { $_ -ne '' })
+        if ($meta.Count -lt 4) { continue }
+        $size = [int64]0
+        if ([int64]::TryParse($meta[3], [ref]$size) -and $size -gt $limit) {
+            Write-Log ('警告：已跟踪文件接近 GitHub 100MB 上限 -> ' + $parts[1])
         }
     }
 } catch { }
