@@ -1,4 +1,4 @@
-# backup_to_github.ps1 — WPT 数据每小时备份到 GitHub
+﻿# backup_to_github.ps1 — WPT 数据每小时备份到 GitHub
 # 由 Windows 计划任务 "WPT-GitHub-每小时备份" 每小时调用一次。
 #
 # 设计原则：
