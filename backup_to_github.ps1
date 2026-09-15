@@ -2,8 +2,9 @@
 # 由 Windows 计划任务 "WPT-GitHub-每小时备份" 每小时调用一次。
 #
 # 设计原则：
-#   1. 绝不提交 *.aedt —— AEDT 若保存过工程，绝不能让它覆盖仓库里那份校验过的模型
-#      （部署文档硬约束：Projecttonight.aedt 必须保持 25155997 字节 / md5 9bb98917...）
+#   1. 冻结仓库原件 Projecttonight.aedt —— 本机永远不提交它，保证仓库里那份校验过的
+#      模型始终是 25155997 字节 / md5 9bb98917...（部署文档硬约束）
+#      本机的工程改动走 Projecttonightxu.aedt，它会正常备份到 GitHub
 #   2. 无人值守安全 —— 禁止一切交互式提示；缺凭据/断网时快速失败，不挂起、不弹窗
 #   3. 先 rebase 再 push —— 若旧机器仍在推送造成分叉，自动重放本地提交；冲突立即 abort
 #   4. 完全幂等 —— 无变更时不产生空提交
@@ -38,9 +39,12 @@ if (-not (Test-Path -LiteralPath (Join-Path $Repo '.git'))) {
 
 Set-Location -LiteralPath $Repo
 
-# ---------- 1. 暂存全部改动，再把 *.aedt 撤下（保护模型文件） ----------
+# ---------- 1. 暂存全部改动，唯独把仓库原件 Projecttonight.aedt 撤下 ----------
+# 本机的工作工程是 Projecttonightxu.aedt，它必须被备份；
+# 仓库原件 Projecttonight.aedt 必须保持字节不变，所以只冻结这一个精确路径
+# （精确路径不会误伤 Projecttonightxu.aedt）。
 git add -A 2>&1 | Out-Null
-git reset -q -- '*.aedt' 2>&1 | Out-Null
+git reset -q -- 'Projecttonight.aedt' 2>&1 | Out-Null
 
 # ---------- 2. 没有任何可提交内容就退出 ----------
 git diff --cached --quiet
