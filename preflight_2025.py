@@ -3,7 +3,7 @@
 preflight_2025.py — AEDT 高版本(2025.x)可行性自检
 
 用途：在装有 2025 版 Maxwell 的机器上，一次性验证本 WPT 参数化方案能否运行。
-      把本文件 + batch_sweep_unit30.py + Projecttonight.aedt 放同一目录，然后：
+      把本文件 + batch_sweep_unit30.py + Projecttonightxu.aedt 放同一目录，然后：
           python preflight_2025.py
       末尾出现全 [PASS] 即代表可用；出现 [HANG] 就要看是哪一步（多半是非图形模式）。
 
@@ -19,7 +19,7 @@ import os, sys, time, math, glob, re, csv, threading, traceback
 
 # ================== 配置（换机器只改这一段） ==================
 TARGET_VERSION = "2025.1"        # 目标 AEDT 版本；找不到会自动回退到检测到的最高可用版
-PROJECT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Projecttonight.aedt")
+PROJECT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Projecttonightxu.aedt")
 DESIGN  = "WPT_G"
 SAVE_PROJECT = False             # 绝不改成 True（新版保存会单向升级 .aedt）
 

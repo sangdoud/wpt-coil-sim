@@ -12,12 +12,12 @@ import os, sys, time, csv, math
 from ansys.aedt.core import Desktop, Maxwell3d
 
 # ============ 可配置区 ============
-BASE_DIR = r"C:/Users/lenovo/Desktop/zidong"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PLAN_CSV = os.path.join(BASE_DIR, "combos_unit30.csv")
 OUT_CSV  = os.path.join(BASE_DIR, "sweep_all_unit30.csv")
 LOG_FILE = os.path.join(BASE_DIR, "batch_sweep_unit30.log")
 
-PROJECT = r"C:/Users/lenovo/Documents/Ansoft/Projecttonight.aedt"
+PROJECT = os.path.join(BASE_DIR, "Projecttonightxu.aedt")
 DESIGN  = "WPT_G"
 AEDT_VERSION = "2024.1"
 

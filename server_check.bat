@@ -35,10 +35,10 @@ if %errorlevel%==0 (
 echo.
 
 echo [4/5] 检查项目文件 ...
-if exist "C:\wpt\Projecttonight.aedt" (
-    echo   [OK] C:\wpt\Projecttonight.aedt 存在
+if exist "C:\wpt\Projecttonightxu.aedt" (
+    echo   [OK] C:\wpt\Projecttonightxu.aedt 存在
 ) else (
-    echo   [MISSING] 未找到 C:\wpt\Projecttonight.aedt，请从本机拷入
+    echo   [MISSING] 未找到 C:\wpt\Projecttonightxu.aedt，请从本机拷入
 )
 if exist "C:\wpt\batch_sweep.py" (
     echo   [OK] C:\wpt\batch_sweep.py 存在
