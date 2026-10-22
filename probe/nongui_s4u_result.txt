@@ -1,0 +1,21 @@
+=== 2026-10-13 08:52:58 开始：non_graphical=False  pid=44916  会话=? ===
+=== 2026-10-13 08:52:58 开始：non_graphical=True  pid=32360  会话=? ===
+  成功：aedt_pid=8256  用时 7.0 s
+  会话已释放
+=== 结束 ===
+=== 2026-10-13 08:54:58 开始：non_graphical=True  pid=44396  会话=? ===
+  成功：aedt_pid=40576  用时 6.9 s
+  会话已释放
+=== 结束 ===
+  失败（148.9 s）：Exception('Failed to start new AEDT gRPC session on port 50689 on machine 127.0.0.1.')
+  e, non_graphical=mode,
+                  close_on_exit=False)
+    File "C:\anaconda\Lib\site-packages\ansys\aedt\core\desktop.py", line 861, in __init__
+      result = self.__init_grpc()
+    File "C:\anaconda\Lib\site-packages\ansys\aedt\core\desktop.py", line 3308, in __init_grpc
+      raise Exception(
+          f"Failed to start new AEDT gRPC session on port {self.port} on machine {self.machine}."
+      )
+  Exception: Failed to start new AEDT gRPC session on port 50689 on machine 127.0.0.1.
+  
+=== 结束 ===

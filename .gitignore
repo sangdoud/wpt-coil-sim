@@ -1,20 +1,48 @@
-# 临时求解/网格文件（大，不建议传）
+# ============================================================================
+# 本仓库是 WPT 批量仿真项目的代码/文档/种子仓库
+# ⚠️ 关键：.aedt 是**必需资产**（母本工程），不得忽略。
+#    源机 C:\wpt\.gitignore 里的 `*.aedt` 只放行 !Projecttonight.aedt，
+#    会挡住 Projecttonight_ref.aedt —— 那会让新设备 clone 后没有母本工程，
+#    整批 8 个实例在同一秒全部起不来。**不要照搬那份 .gitignore。**
+# ============================================================================
+
+# ---- 求解产物与锁文件（可再生，一律不入库）----
 *.aedtresults/
 *.aedt.lock
 *.lock
+*.auto
+*.pyaedt/
 
-# AEDT 项目文件（含求解结果，24-50MB。想传就把这行删掉）
+# ---- AEDT 工程：默认忽略，但**母本工程必须放行** ----
 *.aedt
-!Projecttonight.aedt
-!Projecttonightxu.aedt
+!Projecttonight_ref.aedt
 
+# ---- 凭据：绝对不许入库 ----
+.gh_token
+*_token.txt
+.env
+.env.*
 
-# 日志
+# ---- 日志：一律不入库 ----
+# （`upgrade_upload.log` 这类文件里可能出现令牌错误信息与内网路径，实测漏掉
+#   `*.log` 会导致 wpt/backup_upload.log 被提交 —— 单一规则比逐条列举更可靠）
 *.log
 
-# Python 缓存
+# ---- 运行时产物 ----
 __pycache__/
 *.pyc
+*.tmp
+*.bak
+*.bak_*
+_backup_adapt_*/
+_backup_rename_*/
 
-# 调试临时脚本（保留核心脚本，这些测试用可忽略）
-# test_*.py 如需保留删掉下面这行
+# ---- 批次运行期产物（raw 是真值来源，单独归档，不进代码仓库）----
+*_raw_run*.csv
+*_plan_shard*.csv
+*_worker_run*.json
+*_stdout_*.txt
+
+# ---- 大件：安装介质与交付包 ----
+*.iso
+b1_delivery_*.zip

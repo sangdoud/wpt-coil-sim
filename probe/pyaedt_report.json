@@ -1,0 +1,545 @@
+{
+  "version": "1",
+  "pip_version": "26.1.2",
+  "install": [
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/8b/af/8b615f93d49ac6c98ff1e707a3170ef768fd9c40aadfdb529503236591c4/pyaedt-1.3.0-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "a318f94ed1dcb1607b153d6db23c087ab77bd386104c73c7f9dc47c3be65708f"
+          },
+          "hash": "sha256=a318f94ed1dcb1607b153d6db23c087ab77bd386104c73c7f9dc47c3be65708f"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "pyaedt",
+        "version": "1.3.0",
+        "dynamic": [
+          "license-file"
+        ],
+        "summary": "High-level Python API for Ansys Electronics Desktop Framework",
+        "description": "<!-- -->\n<a name=\"readme-top\"></a>\n<!--\n*** PyAEDT README\n-->\n\n[![PyAEDT logo](https://raw.githubusercontent.com/ansys/pyaedt/main/doc/source/_static/logo.png)](https://aedt.docs.pyansys.com)\n\n<p style=\"text-align: center;\">\n    <br> English | <a href=\"README_CN.md\">中文</a>\n</p>\n\n[![PyAnsys](https://img.shields.io/badge/Py-Ansys-ffc107.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABDklEQVQ4jWNgoDfg5mD8vE7q/3bpVyskbW0sMRUwofHD7Dh5OBkZGBgW7/3W2tZpa2tLQEOyOzeEsfumlK2tbVpaGj4N6jIs1lpsDAwMJ278sveMY2BgCA0NFRISwqkhyQ1q/Nyd3zg4OBgYGNjZ2ePi4rB5loGBhZnhxTLJ/9ulv26Q4uVk1NXV/f///////69du4Zdg78lx//t0v+3S88rFISInD59GqIH2esIJ8G9O2/XVwhjzpw5EAam1xkkBJn/bJX+v1365hxxuCAfH9+3b9/+////48cPuNehNsS7cDEzMTAwMMzb+Q2u4dOnT2vWrMHu9ZtzxP9vl/69RVpCkBlZ3N7enoDXBwEAAA+YYitOilMVAAAAAElFTkSuQmCC)](https://docs.pyansys.com/)\n[![PyPI](https://img.shields.io/pypi/v/pyaedt.svg?logo=python&logoColor=white)](https://pypi.org/project/pyaedt/)\n[![PyPI downloads](https://static.pepy.tech/badge/pyaedt/month)](https://www.pepy.tech/projects/pyaedt)\n[![Conda](https://anaconda.org/conda-forge/pyaedt/badges/version.svg)](https://anaconda.org/conda-forge/pyaedt)\n[![Conda downloads](https://img.shields.io/conda/dn/conda-forge/pyaedt?label=Conda%20downloads)](https://anaconda.org/conda-forge/pyaedt)\n[![Python version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)\n[![GitHub CI](https://github.com/ansys/pyaedt/actions/workflows/nightly-tests.yml/badge.svg)](https://github.com/ansys/pyaedt/actions/workflows/nightly-tests.yml)\n[![codecov](https://codecov.io/gh/ansys/pyaedt/branch/main/graph/badge.svg)](https://codecov.io/gh/ansys/pyaedt)\n[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/blog/license/mit)\n[![ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)\n[![pre-commit.ci](https://results.pre-commit.ci/badge/github/ansys/pyaedt/main.svg)](https://results.pre-commit.ci/latest/github/ansys/pyaedt/main)\n[![deep-wiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ansys/pyaedt)\n\n## What is PyAEDT?\n\nPyAEDT is a Python library that interacts directly with the API for\nAnsys Electronics Desktop (AEDT) to make scripting simpler. The architecture\nfor PyAEDT can be reused for all AEDT 3D products (HFSS, Icepak, Maxwell 3D,\nand Q3D Extractor), 2D tools, and Ansys Mechanical inside AEDT. PyAEDT also provides\nsupport for circuit tools like Nexxim and system simulation tools like\nTwin Builder. Finally, PyAEDT provides scripting capabilities in Ansys layout\ntools like HFSS 3D Layout. The Ansys Electronics Database\n([EDB](https://edb.docs.pyansys.com/version/stable/)) is included\nwith PyAEDT as a dependency and is recommended for any automated manipulation and\nsetup of layout data for PCBs, electronic packages, and integrated circuits.\n\nThe PyAEDT class and method structures\nsimplify operation while reusing information as much as possible across\nthe API.\n\n## Install on CPython from PyPI\n\nYou can install PyAEDT on CPython 3.10 through 3.14 from PyPI with this command:\n\n\n```sh\n  pip install pyaedt\n```\n\nInstall PyAEDT with all extra packages (matplotlib, numpy, pandas, pyvista, ...):\n\n```sh\n  pip install pyaedt[all]\n```\n\n> **Note:**\nThe [all] installation target includes `fpdf2` for PDF export functionality, which is\nunder license LGPL v3. For license-sensitive environments, install PyAEDT without [all]\nand add dependencies individually.\n\nYou can also install PyAEDT from Conda-Forge with this command:\n\n```sh\n  conda install -c conda-forge pyaedt\n```\nPyAEDT remains compatible with IronPython and can be still used in the AEDT Framework.\n\n## PyAEDT compatibility requirements\n\nPyAEDT has different compatibility requirements based on its version. Below is an overview of the compatibility matrix between PyAEDT, Python versions, and AEDT releases:\n\n- PyAEDT Version ≤ 0.8.11:\n  - Python Compatibility:\n    - Compatible with IronPython (Python 2.7).\n    - Compatible with Python 3.7 and versions up to Python 3.11.\n  - AEDT Compatibility:\n    - All tests were conducted using AEDT 2024 R1.\n- 0.9.0 <= PyAEDT Version < 0.18.0:\n  - Python Compatibility:\n    - Dropped support for python 3.7 and below.\n    - Compatible with Python 3.8 and versions up to Python 3.12.\n  - AEDT Compatibility:\n    - Version 0.9.x has been tested using AEDT 2024 R1.\n    - From versions 0.10.0 to 0.13.3, all tests have been performed with AEDT 2024 R2.\n    - Starting from version 0.14.0, all tests are performed with AEDT 2025 R1.\n- PyAEDT Version ≥ 0.18.0:\n  - Python Compatibility:\n    - Dropped support for Python 3.8 and 3.9.\n    - Compatible with Python 3.10 and versions up to Python 3.13.\n  - AEDT Compatibility:\n    - All tests were conducted using AEDT 2025 R1.\n- PyAEDT Version ≥ 0.27.0:\n  - Python Compatibility:\n    - Compatible with Python 3.10 and versions up to Python 3.14.\n  - AEDT Compatibility:\n    - All tests were conducted using AEDT 2026 R1.\n\n\n## About PyAnsys\n\nPyAEDT is part of the larger [PyAnsys](https://docs.pyansys.com \"PyAnsys\") effort to facilitate the use of Ansys technologies directly from Python.\n\nPyAEDT is intended to consolidate and extend all existing\nfunctionalities around scripting for AEDT to allow reuse of existing code,\nsharing of best practices, and increased collaboration.\n\n## About AEDT\n\n[AEDT](https://www.ansys.com/products/electronics) is a platform that enables true\nelectronics system design. AEDT provides access to the Ansys gold-standard\nelectro-magnetics simulation solutions, such as Ansys HFSS, Ansys Maxwell,\nAnsys Q3D Extractor, Ansys SIwave, and Ansys Icepak using electrical CAD (ECAD) and\nMechanical CAD (MCAD) workflows.\n\nIn addition, AEDT includes direct links to the complete Ansys portfolio of thermal, fluid,\nand mechanical solvers for comprehensive multiphysics analysis.\nTight integration among these solutions provides unprecedented ease of use for setup and\nfaster resolution of complex simulations for design and optimization.\n\n<p align=\"center\">\n  <img width=\"100%\" src=\"https://images.ansys.com/is/image/ansys/ansys-electronics-technology-collage?wid=941&op_usm=0.9,1.0,20,0&fit=constrain,0\" title=\"AEDT Applications\" herf=\"https://www.ansys.com/products/electronics\"\n  />\n</p>\n\n`PyAEDT` is licensed under the [MIT License](https://github.com/ansys/pyaedt/blob/main/LICENSE)\n\nPyAEDT includes functionality for interacting with the following AEDT tools and Ansys products:\n\n  - HFSS and HFSS 3D Layout\n  - Icepak\n  - Maxwell 2D, Maxwell 3D, and RMXprt\n  - 2D Extractor and Q3D Extractor\n  - Mechanical\n  - Nexxim\n  - EDB\n  - Twin Builder\n  - EMIT\n\n## Documentation and issues\n\nDocumentation for the latest stable release of PyAEDT is hosted at\n[PyAEDT documentation](https://aedt.docs.pyansys.com/version/stable/).\n\nIn the upper right corner of the documentation's title bar, there is an option\nfor switching from viewing the documentation for the latest stable release\nto viewing the documentation for the development version or previously\nreleased versions.\n\nYou can also view or download PyAEDT cheat sheets, which are one-page references\nproviding syntax rules and commands for using the PyAEDT API and PyEDB API:\n\n- [View](https://cheatsheets.docs.pyansys.com/pyaedt_API_cheat_sheet.png) or\n  [download](https://cheatsheets.docs.pyansys.com/pyaedt_API_cheat_sheet.pdf) the\n  PyAEDT API cheat sheet.\n\n- [View](https://cheatsheets.docs.pyansys.com/pyedb_API_cheat_sheet.png) or\n  [download](https://cheatsheets.docs.pyansys.com/pyedb_API_cheat_sheet.pdf) the\n  PyEDB API cheat sheet.\n\n\nOn the [PyAEDT Issues](https://github.com/ansys/PyAEDT/issues) page, you can\ncreate issues to report bugs and request new features. On the\n[PyAEDT Discussions](https://github.com/ansys/pyaedt/discussions) page or the\n[Discussions](https://discuss.ansys.com/) page on the Ansys Developer portal,\nyou can post questions, share ideas, and get community feedback.\n\nTo reach the project support team, email [pyansys-core@synopsys.com](mailto:pyansys-core@synopsys.com).\n\n## Dependencies\n\nTo run PyAEDT, you must have a local licenced copy of AEDT.\nPyAEDT supports AEDT versions 2022 R1 or newer.\n\n## Contributing\n\nFor comprehensive information on contributing to the PyAnsys project, see the [PyAnsys developer's guide](https://dev.docs.pyansys.com).\n\n\nNote that PyAEDT uses semantic naming for pull requests (PR). This convention\ngreatly simplifies the review process by providing meaningful\ninformation in the PR title. The\nfollowing\n[prefixes](https://github.com/ansys/actions/blob/main/check-pr-title/action.yml)\nshould be used for pull request name:\n\n- \"BUILD\"\n- \"CHORE\"\n- \"CI\"\n- \"DOCS\"\n- \"FEAT\"\n- \"FIX\"\n- \"PERF\"\n- \"REFACTOR\"\n- \"REVERT\"\n- \"STYLE\"\n- \"TEST\"\n\n\n## Student version\n\nPyAEDT supports AEDT Student versions 2022 R1 and later. For more information, see the\n[Ansys Electronics Desktop Student - Free Software Download](https://www.ansys.com/academic/students/ansys-electronics-desktop-student)\npage on the Ansys website.\n\n## Why PyAEDT?\n\nA quick and easy approach for automating a simple operation in the AEDT UI is to record and reuse a script. However, disadvantages of this approach are:\n\n  - Recorded code is dirty and difficult to read and understand.\n  - Recorded scripts are difficult to reuse and adapt.\n  - Complex coding is required by many global users of AEDT.\n\nThe main advantages of PyAEDT are:\n\n  - Automatic initialization of all AEDT objects, such as desktop objects like the editor and boundaries\n  - Error management\n  - Log management\n  - Variable management\n  - Compatibility with IronPython and CPython\n  - Simplification of complex API syntax using data objects while maintaining PEP8 compliance.\n  - Code reusability across different solvers\n  - Clear documentation on functions and API\n  - Unit tests of code to increase quality across different AEDT versions\n\n## Example workflow\n\n 1. Initialize the ``Desktop`` class with the version of AEDT to use.\n 2. Initialize the application to use within AEDT.\n\n## Connect to AEDT from Python IDE\n\nPyAEDT works both inside AEDT and as a standalone application. This Python library\nautomatically detects whether it is running in an IronPython or CPython environment\nand initializes AEDT accordingly. PyAEDT also provides advanced error management.\nUsage examples follow.\n\n## Explicit AEDT declaration and error management\n\n``` python\n# Launch AEDT 2022 R2 in non-graphical mode\n\nfrom ansys.aedt.core import Desktop, Circuit\n\nwith Desktop(\n    version=\"2022.2\",\n    non_graphical=False,\n    new_desktop=True,\n    close_on_exit=True,\n    student_version=False,\n):\n    circuit = Circuit()\n    ...\n    # Any error here will be caught by Desktop.\n    ...\n\n# Desktop is automatically released here.\n```\n\n## Implicit AEDT declaration and error management\n\n``` python\n# Launch the latest installed version of AEDT in graphical mode\n\nfrom ansys.aedt.core import Circuit\n\nwith Circuit(version=\"2022.2\", non_graphical=False) as circuit:\n    ...\n    # Any error here will be caught by Desktop.\n    ...\n\n# Desktop is automatically released here.\n```\n\n## Remote application call\n\nYou can make a remote application call on a CPython server. Start the service manager:\n\n``` python\nfrom ansys.aedt.core.common_rpc import pyaedt_service_manager\n\npyaedt_service_manager(host=\"host name\")\n```\n\nThe host name can be the IP address or the host name of the server machine.\n\nOn a client machine:\n\n``` python\nfrom ansys.aedt.core import settings\nfrom ansys.aedt.core.common_rpc import create_session\nfrom ansys.aedt.core.hfss import Hfss\n\n# Required for the Hfss call below to behave as expected.\n# If not set, the client attempts to launch a local instance\n# of AEDT instead of connecting to the remote server.\nsettings.grpc_local = False\n\ncl1 = create_session(\"host name\", client_port=50010)\ncl1.aedt(host=\"host name\", port=50011, non_graphical=False)\nhfss = Hfss(machine=\"host name\", port=50011)\nbox = hfss.modeler.create_box([0, 0, 0], [10, 10, 10], name=\"MyBox\")\n```\n\nPort numbers can be adjusted as needed.\nThe host name should align with the host name or\nIP address used to start the service manager.\n\n## Variables\n\n``` python\nfrom ansys.aedt.core.Hfss import Hfss\n\nwith Hfss as hfss:\n    hfss[\"dim\"] = \"1mm\"  # design variable\n    hfss[\"$dim\"] = \"1mm\"  # project variable\n```\n\n## Modeler\n\n``` python\n# Create a box, assign variables, and assign materials.\n\nfrom ansys.aedt.core.hfss import Hfss\n\nwith Hfss as hfss:\n    hfss.modeler.create_box([0, 0, 0], [10, \"dim\", 10], \"mybox\", \"aluminum\")\n```\n\n## License\n\nPyAEDT is licensed under the MIT license.\n\nPyAEDT provides an optional PDF export feature via the class `AnsysReport`.\nIt requires the [fpdf2](https://github.com/py-pdf/fpdf2)\nlibrary, which is licensed under the\n[GNU Lesser General Public License v3.0 (LGPLv3)](https://www.gnu.org/licenses/lgpl-3.0.en.html#license-text).\n\nPyAEDT makes no commercial claim over Ansys whatsoever. This library extends the\nfunctionality of AEDT by adding a Python interface to AEDT without changing the\ncore behavior or license of the original software. The use of PyAEDT requires a\nlegally licensed local copy of AEDT.\n\nTo get a copy of AEDT, see the [Ansys Electronics](https://www.ansys.com/products/electronics)\npage on the Ansys website.\n\n<p style=\"text-align: right;\"> <a href=\"#readme-top\">back to top</a> </p>\n\n## Indices and tables\n\n-  [Index](https://aedt.docs.pyansys.com/version/stable/genindex.html)\n-  [Module Index](https://aedt.docs.pyansys.com/version/stable/py-modindex.html)\n-  [Search Page](https://aedt.docs.pyansys.com/version/stable/search.html)\n\n",
+        "description_content_type": "text/markdown",
+        "author_email": "\"Synopsys, Inc. and ANSYS, Inc.\" <pyansys-core@synopsys.com>",
+        "maintainer_email": "\"Synopsys, Inc. and ANSYS, Inc.\" <pyansys-core@synopsys.com>",
+        "license_expression": "MIT",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 4 - Beta",
+          "Intended Audience :: Developers",
+          "Intended Audience :: Science/Research",
+          "Intended Audience :: Manufacturing",
+          "Operating System :: OS Independent",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Topic :: Software Development :: Libraries",
+          "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+          "Topic :: Scientific/Engineering :: Information Analysis"
+        ],
+        "requires_dist": [
+          "ansys-tools-common",
+          "grpcio>=1.50.0",
+          "jsonschema",
+          "psutil>=6.0.0",
+          "pyedb>=0.75.0",
+          "tomli; python_version < \"3.11\"",
+          "tomli-w",
+          "pyyaml",
+          "defusedxml>=0.7",
+          "numpy>=1.20.0",
+          "pydantic>=2.6.4",
+          "ansys-pythonnet>=3.1.0rc3; extra == \"dotnet\"",
+          "cffi>=1.16.0; platform_system == \"Linux\" and extra == \"dotnet\"",
+          "pywin32>=303; platform_system == \"Windows\" and extra == \"dotnet\"",
+          "ansys-tools-visualization-interface; extra == \"graphics\"",
+          "pyvista[io]<0.49,>=0.38.0; extra == \"graphics\"",
+          "matplotlib>=3.5.0; extra == \"graphics\"",
+          "vtk<9.7,>=9.0; extra == \"graphics\"",
+          "fpdf2; extra == \"graphics\"",
+          "pillow; extra == \"graphics\"",
+          "jupyterlab>=3.6.0; extra == \"jupyter\"",
+          "ipython>=7.30.0; extra == \"jupyter\"",
+          "matplotlib>=3.5.0; extra == \"all\"",
+          "openpyxl>=3.1.0; extra == \"all\"",
+          "osmnx>=2.0.0; extra == \"all\"",
+          "pandas>=1.1.0; extra == \"all\"",
+          "pyvista[io]<0.49,>=0.38.0; extra == \"all\"",
+          "fast-simplification>=0.1.7; extra == \"all\"",
+          "ansys-tools-visualization-interface; extra == \"all\"",
+          "tables; python_version >= \"3.10\" and extra == \"all\"",
+          "scikit-rf>=0.30.0; extra == \"all\"",
+          "pyaedt[jupyter]; extra == \"all\"",
+          "requests; extra == \"all\"",
+          "typer>=0.20.0; extra == \"all\"",
+          "fpdf2; extra == \"all\"",
+          "rpyc>=6.0.0; extra == \"all\"",
+          "matplotlib>=3.5.0; extra == \"all-dotnet\"",
+          "openpyxl>=3.1.0; extra == \"all-dotnet\"",
+          "osmnx>=2.0.0; extra == \"all-dotnet\"",
+          "pandas>=1.1.0; extra == \"all-dotnet\"",
+          "pyvista[io]<0.49,>=0.38.0; extra == \"all-dotnet\"",
+          "fast-simplification>=0.1.7; extra == \"all-dotnet\"",
+          "ansys-tools-visualization-interface; extra == \"all-dotnet\"",
+          "tables; python_version >= \"3.10\" and extra == \"all-dotnet\"",
+          "scikit-rf>=0.30.0; extra == \"all-dotnet\"",
+          "pyaedt[jupyter]; extra == \"all-dotnet\"",
+          "requests; extra == \"all-dotnet\"",
+          "typer>=0.20.0; extra == \"all-dotnet\"",
+          "fpdf2; extra == \"all-dotnet\"",
+          "rpyc>=6.0.0; extra == \"all-dotnet\"",
+          "ansys-pythonnet>=3.1.0rc3; extra == \"all-dotnet\"",
+          "cffi>=1.16.0; platform_system == \"Linux\" and extra == \"all-dotnet\"",
+          "pywin32>=303; platform_system == \"Windows\" and extra == \"all-dotnet\"",
+          "imageio>=2.34.0; extra == \"examples\"",
+          "matplotlib>=3.5.0; extra == \"examples\"",
+          "openpyxl>=3.1.0; extra == \"examples\"",
+          "osmnx>=2.0.0; extra == \"examples\"",
+          "pandas>=1.1.0; extra == \"examples\"",
+          "pyvista[jupyter]>=0.38.0; extra == \"examples\"",
+          "fast-simplification>=0.1.7; extra == \"examples\"",
+          "joblib>=1.4.0; extra == \"examples\"",
+          "plotly>=6.0; extra == \"examples\"",
+          "scikit-rf>=0.30.0; extra == \"examples\"",
+          "fpdf2; extra == \"examples\"",
+          "rpyc>=6.0.0; extra == \"examples\"",
+          "tables; python_version >= \"3.10\" and extra == \"examples\""
+        ],
+        "requires_python": "<4,>=3.10",
+        "project_url": [
+          "Bugs, https://github.com/ansys/pyaedt/issues",
+          "Documentation, https://aedt.docs.pyansys.com",
+          "Source, https://github.com/ansys/pyaedt",
+          "Discussions, https://github.com/ansys/pyaedt/discussions",
+          "Releases, https://github.com/ansys/pyaedt/releases",
+          "Changelog, https://github.com/ansys/pyaedt/blob/main/doc/source/changelog.rst"
+        ],
+        "provides_extra": [
+          "dotnet",
+          "graphics",
+          "jupyter",
+          "all",
+          "all-dotnet",
+          "examples"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/65/22/fc9a622d885a7a37ff972a12faaef443d74e47407181da70d0ab62ab41f0/grpcio-1.83.1-cp314-cp314-win_amd64.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "47e6934ad38779271e2e7cc5f78a63a407cf3d98114c65c1fdbcd3f5a716f29b"
+          },
+          "hash": "sha256=47e6934ad38779271e2e7cc5f78a63a407cf3d98114c65c1fdbcd3f5a716f29b"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "grpcio",
+        "version": "1.83.1",
+        "dynamic": [
+          "classifier",
+          "license-file",
+          "provides-extra",
+          "requires-dist",
+          "requires-python"
+        ],
+        "summary": "HTTP/2-based RPC framework",
+        "description": "gRPC Python\n===========\n\nPackage for gRPC Python.\n\n\nInstallation\n------------\n\ngRPC Python is available for Linux, macOS, and Windows.\n\nInstalling From PyPI\n~~~~~~~~~~~~~~~~~~~~\n\nIf you are installing locally...\n\n::\n\n  $ pip install grpcio\n\nElse system wide (on Ubuntu)...\n\n::\n\n  $ sudo pip install grpcio\n\nIf you're on Windows make sure that you installed the :code:`pip.exe` component\nwhen you installed Python (if not go back and install it!) then invoke:\n\n::\n\n  $ pip.exe install grpcio\n\nWindows users may need to invoke :code:`pip.exe` from a command line ran as\nadministrator.\n\nn.b. On Windows and on Mac OS X one *must* have a recent release of :code:`pip`\nto retrieve the proper wheel from PyPI. Be sure to upgrade to the latest\nversion!\n\nInstalling From Source\n~~~~~~~~~~~~~~~~~~~~~~\n\nBuilding from source requires that you have the Python headers (usually a\npackage named :code:`python-dev`).\n\n::\n\n  $ export REPO_ROOT=grpc  # REPO_ROOT can be any directory of your choice\n  $ git clone -b RELEASE_TAG_HERE https://github.com/grpc/grpc $REPO_ROOT\n  $ cd $REPO_ROOT\n  $ git submodule update --init\n\n  # To include systemd socket-activation feature in the build,\n  # first install the `libsystemd-dev` package, then :\n  $ export GRPC_PYTHON_BUILD_WITH_SYSTEMD=1\n\n  # For the next two commands do `sudo pip install` if you get permission-denied errors\n  $ pip install -r requirements.txt\n  $ GRPC_PYTHON_BUILD_WITH_CYTHON=1 pip install .\n\nYou cannot currently install Python from source on Windows. Things might work\nout for you in MSYS2 (follow the Linux instructions), but it isn't officially\nsupported at the moment.\n\nTroubleshooting\n~~~~~~~~~~~~~~~\n\nHelp, I ...\n\n* **... see the following error on some platforms**\n\n  ::\n\n    /tmp/pip-build-U8pSsr/cython/Cython/Plex/Scanners.c:4:20: fatal error: Python.h: No such file or directory\n    #include \"Python.h\"\n                    ^\n    compilation terminated.\n\n  You can fix it by installing `python-dev` package. i.e\n\n  ::\n\n    sudo apt-get install python-dev\n\n\nVersioning\n~~~~~~~~~~\n\ngRPC Python is developed in a monorepo shared with implementations of gRPC in\nother programming languages. While the minor versions are released in\nlock-step with other languages in the repo (e.g. 1.63.0 is guaranteed to exist\nfor all languages), patch versions may be specific to only a single\nlanguage. For example, if 1.63.1 is a C++-specific patch, 1.63.1 may not be\nuploaded to PyPi. As a result, it is __not__ a good assumption that the latest\npatch for a given minor version on Github is also the latest patch for that\nsame minor version on PyPi.\n\n",
+        "description_content_type": "text/x-rst",
+        "author_email": "The gRPC Authors <grpc-io@googlegroups.com>",
+        "license_expression": "Apache-2.0",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14"
+        ],
+        "requires_dist": [
+          "typing-extensions~=4.12",
+          "grpcio-tools>=1.83.1; extra == \"protobuf\""
+        ],
+        "requires_python": ">=3.10",
+        "project_url": [
+          "Homepage, https://grpc.io",
+          "Source Code, https://github.com/grpc/grpc",
+          "Bug Tracker, https://github.com/grpc/grpc/issues",
+          "Documentation, https://grpc.github.io/grpc/python"
+        ],
+        "provides_extra": [
+          "protobuf"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/f3/1e/3d118b6bb09418dd66b579cccdf1a2233345a72e9252c5b4193be8dc1dd4/pyedb-0.83.0-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "b7d1ccea8130993a78078a41bafbde71b90c4f7f6691fa7272dc6bcbad571d57"
+          },
+          "hash": "sha256=b7d1ccea8130993a78078a41bafbde71b90c4f7f6691fa7272dc6bcbad571d57"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.5",
+        "name": "pyedb",
+        "version": "0.83.0",
+        "summary": "Higher-Level Pythonic Ansys Electronics Data Base",
+        "description": "<!-- -->\n<a id=\"readme-top\"></a>\n<!--\n*** PyEDB README\n-->\n\n# PyEDB\n\n[![PyAnsys](https://img.shields.io/badge/Py-Ansys-ffc107.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABDklEQVQ4jWNgoDfg5mD8vE7q/3bpVyskbW0sMRUwofHD7Dh5OBkZGBgW7/3W2tZpa2tLQEOyOzeEsfumlK2tbVpaGj4N6jIs1lpsDAwMJ278sveMY2BgCA0NFRISwqkhyQ1q/Nyd3zg4OBgYGNjZ2ePi4rB5loGBhZnhxTLJ/9ulv26Q4uVk1NXV/f///////69du4Zdg78lx//t0v+3S88rFISInD59GqIH2esIJ8G9O2/XVwhjzpw5EAam1xkkBJn/bJX+v1365hxxuCAfH9+3b9/+////48cPuNehNsS7cDEzMTAwMMzb+Q2u4dOnT2vWrMHu9ZtzxP9vl/69RVpCkBlZ3N7enoDXBwEAAA+YYitOilMVAAAAAElFTkSuQmCC)](https://docs.pyansys.com/)\n[![PythonVersion](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)\n[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n[![DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ansys/pyedb)\n[![Codacy Badge](https://app.codacy.com/project/badge/Grade/cadfeebb7d8346eeb4c3373cbcdffa64)](https://app.codacy.com/gh/ansys/pyedb/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)\n\n## What is PyEDB?\n\nPyEDB is a **high-level Python API** for processing complex and large layout designs in the\nAnsys Electronics Database (EDB) format, which stores information describing designs for\n[Ansys Electronics Desktop](https://www.ansys.com/products/electronics) (AEDT).\n\nPyEDB is designed to make EDB automation easier to learn and faster to use. It provides\nhigh-level, application-oriented workflows for common layout tasks such as:\n\n- opening and creating EDB projects,\n- editing stackups and materials,\n- working with components, nets, padstacks, and ports,\n- building cutouts,\n- and preparing designs for solver workflows.\n\nFor most users, the key point is simple:\n\n> PyEDB exposes high-level APIs intended to stay consistent across supported backends.\n\nThis means that most users can focus on the public PyEDB API and do not need to think about\nbackend implementation details while getting started.\n\n## New user path\n\nIf you are new to PyEDB, follow this path:\n\n1. **Install PyEDB**\n2. **Open or create a design with `Edb`**\n3. **Use the Getting started guide and examples**\n4. **Move to the User guide and API reference as needed**\n\n### Install\n\n```bash\npip install pyedb\n```\n\n### Open an EDB project\n\n```python\nfrom pyedb import Edb\n\nedb = Edb(edbpath=\"myedb.aedb\", version=\"2026.1\")\n\n# Your workflow here\n# stackup, materials, components, nets, ports, padstacks, cutouts, ...\n\nedb.close()\n```\n\n### Advanced: explicitly choose a backend\n\nMost users can work directly with the high-level PyEDB API and do not need to care about\nbackend details.\n\nIf needed, backend selection is available through the `grpc` flag:\n\n```python\nfrom pyedb import Edb\n\nedb = Edb(edbpath=\"myedb.aedb\", version=\"2026.1\", grpc=False)\n```\n\nFor backend-specific guidance, compatibility notes, and migration recommendations, see the\ndedicated backend / compatibility / migration documentation page.\n\n## About PyEDB\n\nPyEDB is part of the larger [PyAnsys](https://docs.pyansys.com/) effort to facilitate the use\nof Ansys technologies directly from Python. It is intended to consolidate and extend existing\nfunctionalities around scripting for EDB to allow reuse of existing code, sharing of best practices,\nand increased collaboration.\n\nPyEDB includes functionality for interacting with Ansys electromagnetic simulators such as:\n\n- HFSS,\n- HFSS 3D Layout,\n- Icepak,\n- Maxwell,\n- Q3D,\n- and SIwave.\n\n## What is EDB?\n\nEDB provides a proprietary database file format (AEDB) for efficient and fast layout design\nhandling and processing for building ready-to-solve projects. EDB addresses signal integrity\n(SI), power integrity (PI-DC), and electro-thermal workflows.\n\nYou can import an AEDB file into AEDT to modify the layout, assign materials, and define ports,\nsimulations, and constraints. You can then launch any of the Ansys electromagnetic simulators.\n\nEDB runs as a standalone API, which means that you do not need to open a user interface (UI).\nBecause EDB opens the `aedb` folder for directly querying and manipulating layout design in\nmemory, it provides a fast and efficient way to handle large and complex layouts.\n\nYou can also parse an AEDB file from a command line in batch in an Ansys electromagnetic simulator\nsuch as HFSS or SIwave. Thus, you can deploy completely non-graphical flows, from layout\ntranslation through simulation results.\n\nAdditionally, you can use PyAEDT to import an AEDB file into AEDT to view a project,\ncombine 3D designs, or perform simulation postprocessing. EDB also supports 3D component models.\n\n## Documentation and issues\n\nDocumentation for the latest stable release of PyEDB is hosted at\n[PyEDB documentation](https://edb.docs.pyansys.com/version/stable/index.html):\n  Learn how to install PyEDB, understand the basic concepts, and get started quickly.\n\n- [Installation](https://edb.docs.pyansys.com/version/stable/getting_started/installation.html):\n  Install PyEDB and verify your environment.\n- [User guide](https://edb.docs.pyansys.com/version/stable/user_guide/index.html):\n  The user guide explains workflows and common tasks.\n- [API reference](https://edb.docs.pyansys.com/version/stable/api/index.html):\n  API descriptions and usage details.\n- [Examples](https://examples.aedt.docs.pyansys.com/version/dev/examples/high_frequency/layout/index.html):\n  Explore end-to-end workflow examples for PyEDB.\n- [Contribute](https://edb.docs.pyansys.com/version/stable/contributing.html):\n  Learn how to contribute to the codebase or documentation.\n\nIf you need backend-specific guidance, platform recommendations, or migration planning, see the\nbackend / compatibility / migration page in the documentation.\n\nIn the upper right corner of the documentation title bar, there is an option\nfor switching from viewing the documentation for the latest stable release\nto viewing the documentation for the development version or previously\nreleased versions.\n\nOn the [PyEDB Issues](https://github.com/ansys/pyedb/issues) page you can\ncreate issues to report bugs and request new features.\n\nOn the [PyEDB Discussions](https://github.com/ansys/pyedb/discussions) or the\n[Ansys Developer Discussions](https://discuss.ansys.com/) page, you can post\nquestions, share ideas, and get community feedback.\n\nTo reach the project support team, email [pyansys.core@ansys.com](mailto:pyansys.core@ansys.com).\n\n## Backend guidance\n\nPyEDB exposes **high-level APIs intended to be backend agnostic**.\n\nFor most users, backend selection should remain a secondary concern. Beginner workflows and\nexamples should focus on the public PyEDB API rather than backend implementation details.\n\nUse the dedicated backend / compatibility / migration documentation page if you need guidance on:\n\n- backend selection,\n- platform considerations,\n- compatibility validation,\n- or migration planning.\n\n## License\n\nPyEDB is licensed under the [MIT License](https://github.com/ansys/pyedb/blob/main/LICENSE).\n\nThis library extends the functionality of EDB by adding a Python interface\nwithout changing the core behavior or license of the original software.\n\nThe use of PyEDB requires a legally licensed local copy of AEDT.\nTo get a copy of AEDT, see the [Ansys Electronics](https://www.ansys.com/products/electronics)\npage on the Ansys website.\n\n[back to top](#pyedb)\n\n",
+        "description_content_type": "text/markdown",
+        "author_email": "\"ANSYS, Inc.\" <pyansys.core@ansys.com>",
+        "maintainer_email": "PyEDB developers <simon.vandenbrouck@ansys.com>",
+        "license_expression": "MIT",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 4 - Beta",
+          "Intended Audience :: Science/Research",
+          "Topic :: Scientific/Engineering :: Information Analysis",
+          "Operating System :: OS Independent",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14"
+        ],
+        "requires_dist": [
+          "numpy>=1.20.0,<3",
+          "pydantic>=2.6.4,<2.14",
+          "toml>=0.10.2",
+          "ansys-edb-core>=0.3.1",
+          "psutil",
+          "defusedxml>=0.7,<8.0",
+          "ezdxf>=1.4.2 ; extra == \"all\"",
+          "scipy>=1.13,<2.0 ; extra == \"all\"",
+          "matplotlib>=3.5.0,<3.11 ; extra == \"all\"",
+          "pandas>=1.1.0,<2.4 ; extra == \"all\"",
+          "scikit-rf ; extra == \"all\"",
+          "Rtree>=1.2.0 ; extra == \"all\"",
+          "shapely ; extra == \"all\"",
+          "typer>=0.20.0 ; extra == \"all\"",
+          "xmltodict ; extra == \"all\"",
+          "pandas>=1.1.0,<2.4 ; extra == \"analysis\"",
+          "scikit-rf ; extra == \"analysis\"",
+          "ansys-pythonnet>=3.1.0rc6 ; extra == \"dotnet\"",
+          "cffi>=1.16.0,<2.2 ; extra == \"dotnet\" and ( platform_system=='Linux')",
+          "pywin32>=304 ; extra == \"dotnet\" and (platform_system=='Windows')",
+          "shapely ; extra == \"geometry\"",
+          "ezdxf>=1.4.2 ; extra == \"geometry\"",
+          "Rtree>=1.2.0 ; extra == \"geometry\"",
+          "scipy>=1.13,<2.0 ; extra == \"geometry\"",
+          "matplotlib>=3.5.0,<3.11 ; extra == \"graphics\""
+        ],
+        "requires_python": ">=3.10,<4",
+        "project_url": [
+          "Bugs, https://github.com/ansys/pyedb/issues",
+          "Discussions, https://github.com/ansys/pyedb/discussions",
+          "Documentation, https://edb.docs.pyansys.com",
+          "Releases, https://github.com/ansys/pyedb/releases",
+          "Source, https://github.com/ansys/pyedb"
+        ],
+        "provides_extra": [
+          "all",
+          "analysis",
+          "dotnet",
+          "geometry",
+          "graphics"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/a4/5b/e3be9731ae0a973956091e65570783236268e2f8b0f1eb71725001129a32/ansys_edb_core-0.3.3-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "992602e86ec6528d0514614cb5411b4d48496285eee80127959a7f84a0d2fa5b"
+          },
+          "hash": "sha256=992602e86ec6528d0514614cb5411b4d48496285eee80127959a7f84a0d2fa5b"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "ansys-edb-core",
+        "version": "0.3.3",
+        "summary": "A python wrapper for Ansys Edb service",
+        "description": "PyEDB-Core\n==========\n\n|pyansys| |python| |pypi| |MIT|\n\n.. |pyansys| image:: https://img.shields.io/badge/Py-Ansys-ffc107.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABDklEQVQ4jWNgoDfg5mD8vE7q/3bpVyskbW0sMRUwofHD7Dh5OBkZGBgW7/3W2tZpa2tLQEOyOzeEsfumlK2tbVpaGj4N6jIs1lpsDAwMJ278sveMY2BgCA0NFRISwqkhyQ1q/Nyd3zg4OBgYGNjZ2ePi4rB5loGBhZnhxTLJ/9ulv26Q4uVk1NXV/f///////69du4Zdg78lx//t0v+3S88rFISInD59GqIH2esIJ8G9O2/XVwhjzpw5EAam1xkkBJn/bJX+v1365hxxuCAfH9+3b9/+////48cPuNehNsS7cDEzMTAwMMzb+Q2u4dOnT2vWrMHu9ZtzxP9vl/69RVpCkBlZ3N7enoDXBwEAAA+YYitOilMVAAAAAElFTkSuQmCC\n   :target: https://docs.pyansys.com/\n   :alt: PyAnsys\n\n.. |python| image:: https://img.shields.io/pypi/pyversions/ansys-edb-core?logo=pypi\n   :target: https://pypi.org/project/ansys-edb-core/\n   :alt: Python\n\n.. |pypi| image:: https://img.shields.io/pypi/v/ansys-edb-core.svg?logo=python&logoColor=white\n   :target: https://pypi.org/project/ansys-edb-core\n   :alt: PyPI\n\n.. |MIT| image:: https://img.shields.io/badge/License-MIT-yellow.svg\n   :target: https://opensource.org/licenses/MIT\n   :alt: MIT\n\n|GH-CI| |black|\n\n.. |GH-CI| image:: https://github.com/ansys/pyedb-core/actions/workflows/ci_cd.yml/badge.svg\n   :target: https://github.com/ansys/pyedb-core/actions/workflows/ci_cd.yml\n   :alt: GH-CI\n\n.. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg?style=flat\n   :target: https://github.com/psf/black\n   :alt: Black\n\n.. reuse_start\n\nPyEDB-Core is a Python client for the Electronics Database (EDB), a format for storing\ninformation describing designs for Ansys Electronic Desktop (AEDT). Using the PyEDB-Core API,\nyou can make calls to an EDB server that is running either locally or remotely.\n\nThe EDB server can create, edit, read, and write EDB files to disk. These files can then be\nread into AEDT and their designs simulated.\n\nDocumentation and issues\n~~~~~~~~~~~~~~~~~~~~~~~~\nDocumentation for the latest stable release of PyEDB-Core is hosted at\n`PyEDB-Core documentation <https://edb.core.docs.pyansys.com/version/stable/index.html#>`_.\nThe documentation has five sections:\n\n- `Getting started <https://edb.core.docs.pyansys.com/version/stable/getting_started/index.html#>`_: Describes\n  how to install PyEDB-Core in user mode.\n- `User guide <https://edb.core.docs.pyansys.com/version/stable/user_guide/index.html>`_: Describes how to\n  use PyEDB-Core.\n- `API reference <https://edb.core.docs.pyansys.com/version/stable/api/index.html>`_: Provides API member descriptions\n  and usage examples.\n- `Examples <https://edb.core.docs.pyansys.com/version/stable/examples/index.html>`_: Provides examples showing\n  end-to-end workflows for using PyEDB-Core.\n- `Contribute <https://edb.core.docs.pyansys.com/version/stable/contribute.html>`_: Describes how to install\n  PyEDB-Core in developer mode and how to contribute to this PyAnsys library.\n\nIn the upper right corner of the documentation's title bar, there is an option for switching from\nviewing the documentation for the latest stable release to viewing the documentation for the\ndevelopment version or previously released versions.\n\nOn the `PyEDB-Core Issues <https://github.com/ansys/pyedb-core/issues>`_ page, you can create\nissues to report bugs and request new features. When possible, use these issue templates:\n\n* Bug report template\n* Feature request template\n* Documentation issue template\n* Example request template\n\nIf your issue does not fit into one of these categories, create your own issue.\n\nOn the `Discussions <https://discuss.ansys.com/>`_ page on the Ansys Developer portal, you can post questions,\nshare ideas, and get community feedback.\n\nTo reach the PyAnsys support team, email `pyansys.core@ansys.com <pyansys.core@ansys.com>`_.\n\nLicense\n~~~~~~~\nPyEDB-Core is licensed under the MIT license.\n\nPyEDB-Core makes no commercial claim over Ansys whatsoever. The use of this Python client requires\na legally licensed copy of AEDT. For more information, see the\n`Ansys Electronics <https://www.ansys.com/products/electronics>`_ page on the Ansys website.\n\n",
+        "description_content_type": "text/x-rst",
+        "author_email": "\"ANSYS, Inc.\" <pyansys.support@ansys.com>",
+        "maintainer_email": "PyAnsys developers <pyansys.maintainers@ansys.com>",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 4 - Beta",
+          "Intended Audience :: Science/Research",
+          "Topic :: Scientific/Engineering :: Information Analysis",
+          "License :: OSI Approved :: MIT License",
+          "Operating System :: OS Independent",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13"
+        ],
+        "requires_dist": [
+          "ansys-api-edb==0.3.2",
+          "protobuf>=4.25.8,<7",
+          "grpcio>=1.44.0",
+          "ansys-tools-common>=0.3.1",
+          "sphinx==7.4.7 ; extra == \"doc\"",
+          "numpydoc==1.9.0 ; extra == \"doc\"",
+          "ansys_sphinx_theme>=0.12.2 ; extra == \"doc\"",
+          "sphinx-copybutton==0.5.2 ; extra == \"doc\"",
+          "notebook ; extra == \"notebook\"",
+          "matplotlib ; extra == \"notebook\"",
+          "ipynbname ; extra == \"notebook\"",
+          "pytest==8.4.1 ; extra == \"tests\"",
+          "pytest-cov==6.2.1 ; extra == \"tests\"",
+          "pytest-mock==3.14.1 ; extra == \"tests\"",
+          "tox ; extra == \"tests\""
+        ],
+        "requires_python": ">=3.10",
+        "project_url": [
+          "Documentation, https://edb.core.docs.pyansys.com",
+          "Homepage, https://github.com/ansys/pyedb-core",
+          "Source, https://github.com/ansys/pyedb-core",
+          "Tracker, https://github.com/ansys/pyedb-core/issues"
+        ],
+        "provides_extra": [
+          "doc",
+          "notebook",
+          "tests"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/e1/ee/3f0df4ab2a16f62479c318707ba9bc8a82968b8ea0a2aaeb3991b180aecf/ansys_api_edb-0.3.2-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "c9ee598781fd0dc074c404351d827031496e06d3d93ed5a68a28720218932a71"
+          },
+          "hash": "sha256=c9ee598781fd0dc074c404351d827031496e06d3d93ed5a68a28720218932a71"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "ansys-api-edb",
+        "version": "0.3.2",
+        "dynamic": [
+          "author",
+          "author-email",
+          "description",
+          "description-content-type",
+          "home-page",
+          "license",
+          "license-file",
+          "maintainer",
+          "maintainer-email",
+          "project-url",
+          "requires-dist",
+          "requires-python",
+          "summary"
+        ],
+        "summary": "Autogenerated Python gRPC interface package for ansys-api-edb, built on 21:00:48 on 09 June 2026",
+        "description": "### ansys-api-edb gRPC Interface Package\n\nThis repository provides the auto-generated gRPC Python interface files for\nthe Ansys Edb Service.\n\n\n#### Installation\n\nProvided that these wheels have been published to public PyPI, they can be\ninstalled with:\n\n```\npip install ansys-api-edb\n```\n\n#### Build\n\nTo build the gRPC packages, run:\n\n```\npip install build\npython -m build\n```\n\nThis will create both the source distribution containing just the protofiles\nalong with the wheel containing the protofiles and build Python interface\nfiles.\n",
+        "description_content_type": "text/markdown",
+        "home_page": "https://github.com/ansys/ansys-api-edb",
+        "author": "ANSYS, Inc.",
+        "author_email": "pyansys.core@ansys.com",
+        "maintainer": "ANSYS, Inc.",
+        "maintainer_email": "pyansys.core@ansys.com",
+        "license": "MIT",
+        "license_file": [
+          "LICENCE",
+          "LICENSE"
+        ],
+        "requires_dist": [
+          "grpcio>=1.44",
+          "protobuf<7,>=3.19.3"
+        ],
+        "requires_python": ">=3.10",
+        "project_url": [
+          "Documentation, https://github.com/ansys/ansys-api-edb/#readme",
+          "Source, https://github.com/ansys/ansys-api-edb/",
+          "Tracker, https://github.com/ansys/ansys-api-edb/issues/"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/62/fc/30cee1f72d0add309f45503255040087f65458b446b47743c550aa2ff707/ansys_tools_common-0.5.3-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "f1f70e424ba5f5ead6925b7d9471b0df691d80f8371f36997dcca63bdd11af85"
+          },
+          "hash": "sha256=f1f70e424ba5f5ead6925b7d9471b0df691d80f8371f36997dcca63bdd11af85"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.5",
+        "name": "ansys-tools-common",
+        "version": "0.5.3",
+        "summary": "A set of tools for PyAnsys libraries",
+        "description": "Ansys Common Tools\n==================\n|pyansys| |python| |pypi| |MIT| |GH-CI| |pre-commit|\n\n.. |pyansys| image:: https://img.shields.io/badge/Py-Ansys-ffc107.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABDklEQVQ4jWNgoDfg5mD8vE7q/3bpVyskbW0sMRUwofHD7Dh5OBkZGBgW7/3W2tZpa2tLQEOyOzeEsfumlK2tbVpaGj4N6jIs1lpsDAwMJ278sveMY2BgCA0NFRISwqkhyQ1q/Nyd3zg4OBgYGNjZ2ePi4rB5loGBhZnhxTLJ/9ulv26Q4uVk1NXV/f///////69du4Zdg78lx//t0v+3S88rFISInD59GqIH2esIJ8G9O2/XVwhjzpw5EAam1xkkBJn/bJX+v1365hxxuCAfH9+3b9/+////48cPuNehNsS7cDEzMTAwMMzb+Q2u4dOnT2vWrMHu9ZtzxP9vl/69RVpCkBlZ3N7enoDXBwEAAA+YYitOilMVAAAAAElFTkSuQmCC\n   :target: https://docs.pyansys.com/\n   :alt: PyAnsys\n\n.. |python| image:: https://img.shields.io/pypi/pyversions/ansys-tools-common?logo=pypi\n   :target: https://pypi.org/project/ansys-tools-common/\n   :alt: Python\n\n.. |pypi| image:: https://img.shields.io/pypi/v/ansys-tools-common.svg?logo=python&logoColor=white\n   :target: https://pypi.org/project/ansys-tools-common\n   :alt: PyPI\n\n.. |MIT| image:: https://img.shields.io/badge/License-MIT-yellow.svg\n   :target: https://opensource.org/licenses/MIT\n   :alt: MIT\n\n.. |GH-CI| image:: https://github.com/ansys/ansys-tools-common/actions/workflows/cicd.yml/badge.svg\n   :target: https://github.com/ansys/ansys-tools-common/actions/workflows/cicd.yml\n   :alt: GH-CI\n\n.. |pre-commit| image:: https://results.pre-commit.ci/badge/github/ansys/ansys-tools-common/main.svg\n   :target: https://results.pre-commit.ci/latest/github/ansys/ansys-tools-common/main\n   :alt: pre-commit.ci status\n\nOverview\n--------\n\nAnsys Common Tools provides a set of tools for the PyAnsys ecosystem.\n\n\nDocumentation and issues\n------------------------\n\nDocumentation for the latest stable release of Ansys Common Tools is hosted\nat `Ansys Common Tools documentation <https://tools.docs.pyansys.com/version/stable/index.html>`_.\n\nThe documentation has these sections:\n\n- `Getting started <https://tools.docs.pyansys.com/version/stable/getting_started/index.html>`_: Learn\n  how to install Ansys Common Tools in user mode.\n- `User guide <https://tools.docs.pyansys.com/version/stable/user_guide/index.html>`_: Understand key\n  concepts for implementing the tools in your workflows.\n- `API reference <https://tools.docs.pyansys.com/version/stable/api/index.html>`_: Understand how to\n  use Python to interact programmatically with the tools.\n- `Contribute <https://tools.docs.pyansys.com/version/stable/contributing.html>`_: Learn how to\n  contribute to the Ansys Common Tools codebase or documentation.\n\nIn the upper right corner of the documentation's title bar, there is an option\nfor switching from viewing the documentation for the latest stable release\nto viewing the documentation for the development version or previously\nreleased versions.\n\nOn the Ansys Common Tools `Issues <https://github.com/ansys/ansys-tools-common/issues>`_\npage, you can create issues to report bugs and request new features. On the `Ansys Common Tools Discussions <https://github.com/ansys/ansys-tools-common/discussions>`_ page\nor the `Discussions <https://discuss.ansys.com/>`_ page on the Ansys Developer portal,\nyou can post questions, share ideas, and get community feedback.\n\nIf you have general questions about the PyAnsys ecosystem, email\n`pyansys.core@ansys.com <pyansys.core@ansys.com>`_. If your\nquestion is specific to Ansys Common Tools, ask your\nquestion in an issue as described in the previous paragraph.\n\nLicense\n-------\n\nAnsys Common Tools is licensed under the `MIT License <https://github.com/ansys/ansys-tools-common/blob/main/LICENSE>`_.\n\nAnsys Common Tools makes no commercial claim over Ansys whatsoever.\n",
+        "description_content_type": "text/x-rst",
+        "author_email": "\"ANSYS, Inc.\" <pyansys.core@ansys.com>",
+        "maintainer_email": "\"ANSYS, Inc.\" <pyansys.core@ansys.com>",
+        "license_expression": "MIT",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 4 - Beta",
+          "Intended Audience :: Science/Research",
+          "Operating System :: OS Independent",
+          "Programming Language :: Python :: 3 :: Only",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Topic :: Scientific/Engineering :: Information Analysis"
+        ],
+        "requires_dist": [
+          "click>=8.1.3",
+          "platformdirs>=3.6",
+          "requests>=2.32.4",
+          "scooby>=0.5.12",
+          "typing-extensions>=4.5",
+          "ansys-tools-filetransfer>=0.1.1; extra == 'all'",
+          "ansys-tools-visualization-interface>=0.9.2; extra == 'all'",
+          "apprise>=1.9.7; extra == 'all'",
+          "cryptography>=43.0; extra == 'all'",
+          "pywin32>=311; (sys_platform == 'win32') and extra == 'all'",
+          "ansys-tools-filetransfer>=0.1.1; extra == 'filetransfer'",
+          "ansys-tools-visualization-interface>=0.9.2; extra == 'graphics'",
+          "apprise>=1.9.7; (sys_platform != 'win32') and extra == 'notifications'",
+          "apprise[windows]>=1.9.7; (sys_platform == 'win32') and extra == 'notifications'",
+          "cryptography>=43.0; extra == 'other'"
+        ],
+        "requires_python": "<4,>=3.10",
+        "project_url": [
+          "Discussions, https://github.com/ansys/ansys-tools-common/discussions",
+          "Documentation, https://tools.docs.pyansys.com/",
+          "Issues, https://github.com/ansys/ansys-tools-common/issues",
+          "Releases, https://github.com/ansys/ansys-tools-common/releases/",
+          "Source, https://github.com/ansys/ansys-tools-common"
+        ],
+        "provides_extra": [
+          "all",
+          "filetransfer",
+          "graphics",
+          "notifications",
+          "other"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/5b/32/e263e888bec1c30b40dd834ca8ea6227a9ca9d5c8091986ea0c8746f0305/scooby-0.12.0-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "65dea5b32006ef554aea9e945032c0c448eaacada96078187681e24f0a2fe8fa"
+          },
+          "hash": "sha256=65dea5b32006ef554aea9e945032c0c448eaacada96078187681e24f0a2fe8fa"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "scooby",
+        "version": "0.12.0",
+        "dynamic": [
+          "license-file"
+        ],
+        "summary": "A Great Dane turned Python environment detective",
+        "description": "<p align=\"center\">\n  <img src=\"https://github.com/banesullivan/scooby/raw/main/assets/logo-wordmark.svg\" alt=\"scooby — Python environment detective\"  />\n</p>\n\n[![Downloads](https://img.shields.io/pypi/dm/scooby.svg?label=PyPI%20downloads)](https://pypi.org/project/scooby/)\n[![Tests](https://github.com/banesullivan/scooby/actions/workflows/pythonpackage.yml/badge.svg)](https://github.com/banesullivan/scooby/actions/workflows/pythonpackage.yml)\n[![PyPI Status](https://img.shields.io/pypi/v/scooby.svg?logo=python&logoColor=white)](https://pypi.org/project/scooby/)\n[![Conda Status](https://img.shields.io/conda/vn/conda-forge/scooby.svg)](https://anaconda.org/conda-forge/scooby)\n[![codecov](https://codecov.io/gh/banesullivan/scooby/branch/main/graph/badge.svg?token=eJqZ700tqH)](https://codecov.io/gh/banesullivan/scooby)\n\n_Great Dane turned Python environment detective_\n\nThis is a lightweight tool for easily reporting your Python environment's\npackage versions and hardware resources.\n\nInstall from [PyPI](https://pypi.org/project/scooby/)\n\n```bash\npip install scooby\n```\n\nor from [conda-forge](https://anaconda.org/conda-forge/scooby/)\n\n```bash\nconda install -c conda-forge scooby\n```\n\n![Jupyter Notebook Formatting](https://github.com/banesullivan/scooby/raw/main/assets/jupyter.png)\n\nScooby has HTML formatting for Jupyter notebooks and rich text formatting for\njust about every other environment. We designed this module to be lightweight\nsuch that it could easily be added as a dependency to Python projects for\nenvironment reporting when debugging. Simply add scooby to your dependencies\nand implement a function to have scooby report on the aspects of the\nenvironment you care most about.\n\nIf scooby is unable to detect aspects of an environment that you'd like to\nknow, please share this with us as a feature requests or pull requests.\n\nThe scooby reporting is derived from the versioning-scripts created by [Dieter\nWerthmüller](https://github.com/prisae) for\n[empymod](https://empymod.github.io), [emg3d](https://empymod.github.io), and\nthe [SimPEG](https://github.com/simpeg/) framework. It was heavily inspired by\n`ipynbtools.py` from [qutip](https://github.com/qutip) and\n[`watermark.py`](https://github.com/rasbt/watermark). This package has been\naltered to create a lightweight implementation so that it can easily be used as\nan environment reporting tool in any Python library with minimal impact.\n\n## Usage\n\n### Generating Reports\n\nReports are rendered as html-tables in Jupyter notebooks as shown in the\nscreenshot above, and otherwise as plain text lists. If you do not output the\n`Report` object either at the end of a notebook cell or it is generated\nsomewhere in a vanilla Python script, you may have to print the `Report`\nobject: `print(scooby.Report())`, but note that this will only output the plain\ntext representation of the script.\n\n```py\n>>> import scooby\n>>> scooby.Report()\n```\n\n```\n--------------------------------------------------------------------------------\n  Date: Wed Feb 12 15:35:43 2020 W. Europe Standard Time\n\n                OS : Windows\n            CPU(s) : 16\n           Machine : AMD64\n      Architecture : 64bit\n               RAM : 31.9 GiB\n       Environment : IPython\n\n  Python 3.7.6 | packaged by conda-forge | (default, Jan  7 2020, 21:48:41)\n  [MSC v.1916 64 bit (AMD64)]\n\n             numpy : 1.18.1\n             scipy : 1.3.1\n           IPython : 7.12.0\n        matplotlib : 3.0.3\n            scooby : 0.5.0\n\n  Intel(R) Math Kernel Library Version 2019.0.4 Product Build 20190411 for\n  Intel(R) 64 architecture applications\n--------------------------------------------------------------------------------\n```\n\nFor all the Scooby-Doo fans out there, `doo` is an alias for `Report` so you\ncan oh-so satisfyingly do:\n\n```py\n>>> import scooby\n>>> scooby.doo()\n```\n\n```\n--------------------------------------------------------------------------------\n  Date: Thu Nov 25 09:47:50 2021 MST\n\n                OS : Darwin\n            CPU(s) : 12\n           Machine : x86_64\n      Architecture : 64bit\n               RAM : 32.0 GiB\n       Environment : Python\n       File system : apfs\n\n  Python 3.8.12 | packaged by conda-forge | (default, Oct 12 2021, 21:50:38)\n  [Clang 11.1.0 ]\n\n             numpy : 1.21.4\n             scipy : 1.7.3\n           IPython : 7.29.0\n        matplotlib : 3.5.0\n            scooby : 0.5.8\n--------------------------------------------------------------------------------\n```\n\nOr better yet:\n\n```py\nfrom scooby import doo as doobiedoo\n```\n\nOn top of the default (optional) packages you can provide additional packages,\neither as strings or give already imported packages:\n\n```py\n>>> import pyvista\n>>> import scooby\n>>> scooby.Report(additional=[pyvista, 'vtk', 'no_version', 'does_not_exist'])\n```\n\n```\n--------------------------------------------------------------------------------\n  Date: Wed Feb 12 16:15:15 2020 W. Europe Standard Time\n\n                OS : Windows\n            CPU(s) : 16\n           Machine : AMD64\n      Architecture : 64bit\n               RAM : 31.9 GiB\n       Environment : IPython\n\n  Python 3.7.6 | packaged by conda-forge | (default, Jan  7 2020, 21:48:41)\n  [MSC v.1916 64 bit (AMD64)]\n\n           pyvista : 0.23.1\n               vtk : 8.1.2\n        no_version : Version unknown\n    does_not_exist : Could not import\n             numpy : 1.18.1\n             scipy : 1.3.1\n           IPython : 7.12.0\n        matplotlib : 3.0.3\n            scooby : 0.5.0\n\n  Intel(R) Math Kernel Library Version 2019.0.4 Product Build 20190411 for\n  Intel(R) 64 architecture applications\n--------------------------------------------------------------------------------\n```\n\nFurthermore, scooby reports if a package could not be imported or if the\nversion of a package could not be determined.\n\nOther useful parameters are\n\n- `ncol`: number of columns in the html-table;\n- `text_width`: text width of the plain-text version;\n- `sort`: list is sorted alphabetically if True.\n\nBesides `additional` there are two more lists, `core` and `optional`, which\ncan be used to provide package names. However, they are mostly useful for\npackage maintainers wanting to use scooby to create their reporting system\n(see below).\n\n### Implementing scooby in your project\n\nYou can easily generate a custom `Report` instance using scooby within your\nproject:\n\n```py\nclass Report(scooby.Report):\n    def __init__(self, additional=None, ncol=3, text_width=80, sort=False):\n        \"\"\"Initiate a scooby.Report instance.\"\"\"\n\n        # Mandatory packages.\n        core = ['yourpackage', 'your_core_packages', 'e.g.', 'numpy', 'scooby']\n\n        # Optional packages.\n        optional = ['your_optional_packages', 'e.g.', 'matplotlib']\n\n        scooby.Report.__init__(self, additional=additional, core=core,\n                               optional=optional, ncol=ncol,\n                               text_width=text_width, sort=sort)\n```\n\nThis makes it particularly easy for a user of your project to quickly generate\na report on all of the relevant package versions and environment details when\nsubmitting a bug.\n\n```py\n>>> import your_package\n>>> your_package.Report()\n```\n\nThe packages on the `core`-list are the mandatory ones for your project, while\nthe `optional`-list can be used for optional packages. Keep the\n`additional`-list free to allow your users to add packages to the list.\n\n#### Implementing as a soft dependency\n\nIf you would like to implement scooby, but are hesitant to add another\ndependency to your package, here is an easy way how you can use scooby as a\nsoft dependency. Instead of `import scooby` use the following snippet:\n\n```py\n# Make scooby a soft dependency:\ntry:\n    from scooby import Report as ScoobyReport\nexcept ImportError:\n    class ScoobyReport:\n        def __init__(self, *args, **kwargs):\n            message = (\n                '\\n  *ERROR*: `Report` requires `scooby`.'\n                '\\n           Install it via `pip install scooby` or'\n                '\\n           `conda install -c conda-forge scooby`.\\n'\n            )\n            raise ImportError(message)\n```\n\nand then create your own `Report` class same as above,\n\n```py\nclass Report(ScoobyReport):\n    def __init__(self, additional=None, ncol=3, text_width=80, sort=False):\n        \"\"\"Initiate a scooby.Report instance.\"\"\"\n\n        # Mandatory packages.\n        core = ['yourpackage', 'your_core_packages', 'e.g.', 'numpy', 'scooby']\n\n        # Optional packages.\n        optional = ['your_optional_packages', 'e.g.', 'matplotlib']\n\n        scooby.Report.__init__(self, additional=additional, core=core,\n                               optional=optional, ncol=ncol,\n                               text_width=text_width, sort=sort)\n\n```\n\nIf a user has scooby installed, all works as expected. If scooby is not\ninstalled, it will raise the following exception:\n\n```py\n>>> import your_package\n>>> your_package.Report()\n\n  *ERROR*: `Report` requires `scooby`\n           Install it via `pip install scooby` or\n           `conda install -c conda-forge scooby`.\n```\n\n### Autogenerate Reports for any Packages\n\nScooby can automatically generate a Report for any package and its\ndistribution requirements with the `AutoReport` class:\n\n```py\n>>> import scooby\n>>> scooby.AutoReport('matplotlib')\n```\n\n```\n--------------------------------------------------------------------------------\n  Date: Fri Oct 20 16:49:34 2023 PDT\n\n                OS : Darwin\n            CPU(s) : 8\n           Machine : arm64\n      Architecture : 64bit\n               RAM : 16.0 GiB\n       Environment : Python\n       File system : apfs\n\n  Python 3.11.3 | packaged by conda-forge | (main, Apr  6 2023, 08:58:31)\n  [Clang 14.0.6 ]\n\n        matplotlib : 3.7.1\n         contourpy : 1.0.7\n            cycler : 0.11.0\n         fonttools : 4.39.4\n        kiwisolver : 1.4.4\n             numpy : 1.24.3\n         packaging : 23.1\n            pillow : 9.5.0\n         pyparsing : 3.0.9\n   python-dateutil : 2.8.2\n--------------------------------------------------------------------------------\n```\n\n### Solving Mysteries\n\nAre you struggling with the mystery of whether or not code is being executed in\nIPython, Jupyter, or normal Python? Try using some of scooby's investigative\nfunctions to solve these kinds of mysteries:\n\n```py\nimport scooby\n\nif scooby.in_ipykernel():\n    # Do Jupyter/IPyKernel stuff\nelif scooby.in_ipython():\n    # Do IPython stuff\nelse:\n    # Do normal, boring Python stuff\n```\n\n### How does scooby get version numbers?\n\nA couple of locations are checked, and we are happy to implement more if\nneeded, just open an issue!\n\nCurrently, it looks in the following places:\n\n- `__version__`\n- `version`\n- lookup `VERSION_ATTRIBUTES` in the scooby knowledge base\n- lookup `VERSION_METHODS` in the scooby knowledge base\n\n`VERSION_ATTRIBUTES` is a dictionary of attributes for known python packages\nwith a non-standard place for the version. You can add other known places via:\n\n```py\nscooby.knowledge.VERSION_ATTRIBUTES['a_module'] = 'Awesome_version_location'\n```\n\nSimilarly, `VERSION_METHODS` is a dictionary for methods to retrieve the\nversion, and you can similarly add your methods which will get the version\nof a package.\n\n### Using scooby to get version information.\n\nIf you are only interested in the version of a single package then you can use\nscooby as well. A few examples:\n\n```py\n>>> import scooby, numpy\n>>> scooby.get_version(numpy)\n('numpy', '1.16.4')\n>>> scooby.get_version('no_version')\n('no_version', 'Version unknown')\n>>> scooby.get_version('does_not_exist')\n('does_not_exist', 'Could not import')\n```\n\nNote that modules can be provided as already loaded ones or as strings.\n\n### Tracking Imports in a Session\n\nScooby has the ability to track all imported modules during a Python session\nsuch that _any_ imported, non-standard lib package that is used in the session\nis reported by a `TrackedReport`. For instance, start a session by importing\nscooby and enabling tracking with the `track_imports()` function.\nThen _all_ subsequent packages that are imported during the session will be\ntracked and scooby can report their versions.\nOnce you are ready to generate a `Report`, instantiate a `TrackedReport` object.\n\nIn the following example, we import a constant from `scipy` which will report\nthe versions of `scipy` and `numpy` as both packages are loaded in the session\n(note that `numpy` is internally loaded by `scipy`).\n\n```py\n>>> import scooby\n>>> scooby.track_imports()\n\n>>> from scipy.constants import mu_0 # a float value\n\n>>> scooby.TrackedReport()\n```\n\n```\n--------------------------------------------------------------------------------\n  Date: Thu Apr 16 15:33:11 2020 MDT\n\n                OS : Linux\n            CPU(s) : 8\n           Machine : x86_64\n      Architecture : 64bit\n               RAM : 62.7 GiB\n       Environment : IPython\n\n  Python 3.7.7 (default, Mar 10 2020, 15:16:38)  [GCC 7.5.0]\n\n            scooby : 0.5.2\n             numpy : 1.18.1\n             scipy : 1.4.1\n--------------------------------------------------------------------------------\n```\n\n## Command-Line Interface\n\nScooby comes with a command-line interface. Simply typing\n\n```bash\nscooby\n```\n\nin a terminal will display the default report. You can also use the CLI to show\nthe scooby Report of another package if that package has implemented a Report\nclass as suggested above, using `packagename.Report()`.\n\nAs an example, to print the report of pyvista you can run\n\n```bash\nscooby -r pyvista\n```\n\nwhich will show the Report implemented in PyVista.\n\nThe CLI can also generate a report based on the dependencies of a package's\ndistribution where that package hasn't implemented a Report class. For example,\nwe can generate a Report for `matplotlib` and its dependencies:\n\n```bash\n$ scooby -r matplotlib\n--------------------------------------------------------------------------------\n  Date: Fri Oct 20 17:03:45 2023 PDT\n\n                 OS : Darwin\n             CPU(s) : 8\n            Machine : arm64\n       Architecture : 64bit\n                RAM : 16.0 GiB\n        Environment : Python\n        File system : apfs\n\n  Python 3.11.3 | packaged by conda-forge | (main, Apr  6 2023, 08:58:31)\n  [Clang 14.0.6 ]\n\n         matplotlib : 3.7.1\n          contourpy : 1.0.7\n             cycler : 0.11.0\n          fonttools : 4.39.4\n         kiwisolver : 1.4.4\n              numpy : 1.24.3\n          packaging : 23.1\n             pillow : 9.5.0\n          pyparsing : 3.0.9\n    python-dateutil : 2.8.2\nimportlib-resources : 5.12.0\n--------------------------------------------------------------------------------\n```\n\nSimply type\n\n```bash\nscooby --help\n```\n\nto see all the possibilities.\n\n## Optional Requirements\n\nThe following is a list of optional requirements and their purpose:\n\n- `psutil`: report total RAM in GiB\n- `mkl-services`: report Intel(R) Math Kernel Library version\n",
+        "description_content_type": "text/markdown",
+        "keywords": [
+          "environment",
+          "reporting",
+          "versioning"
+        ],
+        "author_email": "\"Dieter Werthmüller, Bane Sullivan, Alex Kaszynski, and contributors\" <info@pyvista.org>",
+        "license_expression": "MIT",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Intended Audience :: Science/Research",
+          "Natural Language :: English",
+          "Operating System :: OS Independent",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14"
+        ],
+        "requires_dist": [
+          "mkl; platform_system != \"Darwin\" and extra == \"cpu\"",
+          "psutil; extra == \"cpu\""
+        ],
+        "requires_python": ">=3.10",
+        "project_url": [
+          "Bug Reports, https://github.com/banesullivan/scooby/issues",
+          "Homepage, https://github.com/banesullivan/scooby",
+          "Source Code, https://github.com/banesullivan/scooby"
+        ],
+        "provides_extra": [
+          "cpu"
+        ]
+      }
+    }
+  ],
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.14.6",
+    "os_name": "nt",
+    "platform_machine": "AMD64",
+    "platform_release": "2022Server",
+    "platform_system": "Windows",
+    "platform_version": "10.0.20348",
+    "python_full_version": "3.14.6",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.14",
+    "sys_platform": "win32"
+  }
+}

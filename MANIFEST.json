@@ -1,0 +1,1442 @@
+{
+  "generated": "2026-10-13 18:30:42",
+  "generator": "C:\\ansys maxwell2024\\_migration\\build_pack.py",
+  "source_machine": {
+    "workspace": "C:\\ansys maxwell2024",
+    "wpt_code": "C:\\wpt",
+    "os": "Windows Server 2022 (20348)",
+    "aedt": "2024 R1",
+    "pyaedt": "1.3.0",
+    "note": "源机 31.6 GB 内存 / 72 逻辑核；生产并发 8 实例"
+  },
+  "n_files": 234,
+  "total_bytes": 40255648,
+  "by_top": {
+    "work": {
+      "n": 30,
+      "bytes": 13719051
+    },
+    "wpt": {
+      "n": 7,
+      "bytes": 25257672
+    },
+    "probe": {
+      "n": 181,
+      "bytes": 1041828
+    },
+    "docs": {
+      "n": 16,
+      "bytes": 237097
+    }
+  },
+  "files": [
+    {
+      "path": "work/b3/_delayed_launch.py",
+      "bytes": 3333,
+      "sha256": "f3e0a458d8302cc6ce230b40f56c6e5d4b31fa71641943b790f7d983e0304d1a",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\_delayed_launch.py"
+    },
+    {
+      "path": "work/b3/_relaunch_one.py",
+      "bytes": 3277,
+      "sha256": "59e21c242a2ba2ddc883b6bc5c31160a18a9c5e2cdd54f30699d0ae2f2011477",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\_relaunch_one.py"
+    },
+    {
+      "path": "work/b3/b2_accept.py",
+      "bytes": 20207,
+      "sha256": "bf0568904f4eb39944c9c891a3162b966b616979c4a82bd77ab8a12d6327e4c4",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_accept.py"
+    },
+    {
+      "path": "work/b3/b2_clean.py",
+      "bytes": 16332,
+      "sha256": "f3a8d6beb21dbb129e3036db0ab218f6765fc612fbaca4324177e1ed238c74c7",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_clean.py"
+    },
+    {
+      "path": "work/b3/b2_deliver.py",
+      "bytes": 22797,
+      "sha256": "237524f1a9ee9dd90012353ed9da7c861c1b95732fbd96010171428c993386d5",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_deliver.py"
+    },
+    {
+      "path": "work/b3/b2_disk.py",
+      "bytes": 7087,
+      "sha256": "035c3ab30100a6539ec77f3a54dd5fb87c2e2e5298995a013f4d091a95cb29d0",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_disk.py"
+    },
+    {
+      "path": "work/b3/b2_guard.py",
+      "bytes": 49088,
+      "sha256": "4b172ad9d1b6a24d4d2d2566068600674e22ddbd07ecf0950133e0f7b611c93a",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_guard.py"
+    },
+    {
+      "path": "work/b3/b2_partial_export.py",
+      "bytes": 5600,
+      "sha256": "329cdcb777835e4cd25c14d73b4ea52769d6fe25ae5bf86b5ac108682f0b75ba",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_partial_export.py"
+    },
+    {
+      "path": "work/b3/b2_physics_check.py",
+      "bytes": 5406,
+      "sha256": "56436e2b9ef44f84756ed448579fbcc2ab719c7d82248ea9b283e8df61cbaa06",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_physics_check.py"
+    },
+    {
+      "path": "work/b3/b2_status.py",
+      "bytes": 7728,
+      "sha256": "87766ab620ce9459d2f5928b8ef968caeb53697f6f063c2776a67fa0747ee902",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_status.py"
+    },
+    {
+      "path": "work/b3/contract_launch.py",
+      "bytes": 6704,
+      "sha256": "8b9a177dab24c8e13c63e9233ab8fc2f079904106ddd137a4a86f4353fce5907",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\contract_launch.py"
+    },
+    {
+      "path": "work/b3/contract_merge.py",
+      "bytes": 10880,
+      "sha256": "bca43ec07024d0d3ee736c3456df8c94a4ad8634c3adb28f10d71a70a1bea1c0",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\contract_merge.py"
+    },
+    {
+      "path": "work/b3/contract_worker.py",
+      "bytes": 31628,
+      "sha256": "bbbb4a350748ee4561c22e99dcd26f5d4645f3bd771f21e1aaeff0c71e638a0d",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\contract_worker.py"
+    },
+    {
+      "path": "work/b3/preflight.py",
+      "bytes": 31433,
+      "sha256": "0bac125248b38f1f37babfa84cd4d8f5df90d0054cd242601d3f4ebcefc28907",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\preflight.py"
+    },
+    {
+      "path": "work/b3/prepare_b2.py",
+      "bytes": 5566,
+      "sha256": "38548c3066d40e53f433d16712ad593e78e58f6ddafa2024cb666e611bf45d7d",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\prepare_b2.py"
+    },
+    {
+      "path": "work/b3/smoke_one.py",
+      "bytes": 9300,
+      "sha256": "cde66174a4c05fbed8a793d144776463b0c5642c3d31db0a154d6f5aed278faa",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\smoke_one.py"
+    },
+    {
+      "path": "work/b3/test_attach_tcp.py",
+      "bytes": 3296,
+      "sha256": "ccd2841c4fb3ce3d6005468eef81028f3a6945e9accf083e75fd4217dec5d8f9",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\test_attach_tcp.py"
+    },
+    {
+      "path": "work/b3/test_deliver_gate.py",
+      "bytes": 12376,
+      "sha256": "4c66a1f68844a6379c62795c1d838ed5aa7ef2d9d84d81c4653f24fdaef17084",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\test_deliver_gate.py"
+    },
+    {
+      "path": "work/b3/test_desktop_insecure.py",
+      "bytes": 2101,
+      "sha256": "a2e2e32e47ddbb89e469e4066cc3c9b4557d0fd28578b01f25719e19104eacae",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\test_desktop_insecure.py"
+    },
+    {
+      "path": "work/b3/test_disk_sweep.py",
+      "bytes": 3319,
+      "sha256": "93af212cf65cc0686c782abeddc08bb34a73dbd07d9f93b1874004fe7ddc50bb",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\test_disk_sweep.py"
+    },
+    {
+      "path": "work/b3/test_merge_synthetic.py",
+      "bytes": 6226,
+      "sha256": "3a87a38e2597c80e2cd7021ed29778b76786df6ba55c98026229f2a9254e4128",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\test_merge_synthetic.py"
+    },
+    {
+      "path": "work/b3/test_mesh_column.py",
+      "bytes": 3361,
+      "sha256": "96630e8ba43273a883b3dcccb56cd224c69bf5fd0c657b8c03f8b0e71de71a7f",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\test_mesh_column.py"
+    },
+    {
+      "path": "work/Projecttonight_ref.aedt",
+      "bytes": 12696844,
+      "sha256": "b5a65607da3dea2fff4f33ea72159d2dac82d1e3512e44cbc85630051fbd51be",
+      "source": "C:\\ansys maxwell2024\\_work\\Projecttonight_ref.aedt"
+    },
+    {
+      "path": "work/ref/b2_plan.csv",
+      "bytes": 114842,
+      "sha256": "83ff88431a0a6cde76608ea6775176aa7e67da13b77f623d5953594c4ff8de2e",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_plan.csv"
+    },
+    {
+      "path": "work/ref/b2_plan_meta.json",
+      "bytes": 7609,
+      "sha256": "7d5801f747e26ba87f9ffe93b075e5ad9e70286432f2f0785c15a1b706fcdaef",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_plan_meta.json"
+    },
+    {
+      "path": "work/ref/b2_audit.csv",
+      "bytes": 285410,
+      "sha256": "6ea3a0f2afbf63496a55c1515ba74d895191e76000ad576b92fe27e099f8a599",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_audit.csv"
+    },
+    {
+      "path": "work/ref/b2_region_check.csv",
+      "bytes": 216293,
+      "sha256": "9192cb0ec7cee7b5af66299cbab8a5f7f74af11a2041ccb85ac68a25b2066dc5",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_region_check.csv"
+    },
+    {
+      "path": "work/ref/b2_source_samples.csv",
+      "bytes": 114844,
+      "sha256": "bf3c52d509746c25a640f487438f5a1a8c03389492f6d0489f29d810c656712b",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_source_samples.csv"
+    },
+    {
+      "path": "work/ref/b2_partial_exceptions.json",
+      "bytes": 788,
+      "sha256": "c96bce0f48f3ce4b582e508020b7e837232a503c9eca24845295206489260392",
+      "source": "C:\\ansys maxwell2024\\_work\\b2\\b2_partial_exceptions.json"
+    },
+    {
+      "path": "work/ref/b1_plan.csv",
+      "bytes": 15376,
+      "sha256": "68c7a86131951b7069ea19f58d4b7dc9e1e42f8a96d1e458c0ad02ea121dc1c9",
+      "source": "C:\\ansys maxwell2024\\_work\\b1_plan.csv"
+    },
+    {
+      "path": "wpt/batch_sweep_lc.py",
+      "bytes": 41883,
+      "sha256": "d82ac09aa3696afcd66704c3f9ed03380cc1ca08032ae94ef508960703ecdff5",
+      "source": "C:\\wpt\\batch_sweep_lc.py"
+    },
+    {
+      "path": "wpt/coil_gen.py",
+      "bytes": 14014,
+      "sha256": "c30a6c4c523f5f453ff56b62f9603820a1f6e278ee2c1a047408f78893d1641d",
+      "source": "C:\\wpt\\coil_gen.py"
+    },
+    {
+      "path": "wpt/wpt_contract.py",
+      "bytes": 15091,
+      "sha256": "a2becd89006f57d1649aff26b614791ca208df8a38043ebac006017abbb1a37a",
+      "source": "C:\\wpt\\wpt_contract.py"
+    },
+    {
+      "path": "wpt/coil_template_Rx.json",
+      "bytes": 22841,
+      "sha256": "cf9ca9f1384922b86fcd7fa58f012f0cffc0f6e24bc9b54a64eb98a903c9a586",
+      "source": "C:\\wpt\\coil_template_Rx.json"
+    },
+    {
+      "path": "wpt/backup_upload.py",
+      "bytes": 7421,
+      "sha256": "0b7f1b6f1445bb3eef13ebdf225834e763f99463d73f737d26f7e27a5b96267f",
+      "source": "C:\\wpt\\backup_upload.py"
+    },
+    {
+      "path": "wpt/.gitignore",
+      "bytes": 425,
+      "sha256": "4633e1cc27c938e516b92525e1458694be53de05952a13244b0c11454c213897",
+      "source": "C:\\wpt\\.gitignore"
+    },
+    {
+      "path": "wpt/backup/Projecttonight.aedt",
+      "bytes": 25155997,
+      "sha256": "204ca25965d237f0cb6ca9ec167f5379771f9aa1e38b4afd86500c5cb1d1b68c",
+      "source": "C:\\wpt\\backup\\Projecttonight.aedt"
+    },
+    {
+      "path": "probe/ab_box_margin_20261012.py",
+      "bytes": 6122,
+      "sha256": "de65d141aca8e20d9ef018a71290d326fb0e72625d3730170342331d7575badd",
+      "source": "C:\\ansys maxwell2024\\_probe\\ab_box_margin_20261012.py"
+    },
+    {
+      "path": "probe/aedt_shim.py",
+      "bytes": 3856,
+      "sha256": "0660b64aef9d78aada9dc8b77104e102127e31aabfa32b7f5b8056e56ab41add",
+      "source": "C:\\ansys maxwell2024\\_probe\\aedt_shim.py"
+    },
+    {
+      "path": "probe/analyze_capture.py",
+      "bytes": 3571,
+      "sha256": "b7fc230855fec864a07097c9481499788a326511ed82eb246663af7c6391850f",
+      "source": "C:\\ansys maxwell2024\\_probe\\analyze_capture.py"
+    },
+    {
+      "path": "probe/analyze_point_reduction.py",
+      "bytes": 4134,
+      "sha256": "b6024b77de81201853162055f68684e9640474fc57f4a792009ea4fde4d49f8d",
+      "source": "C:\\ansys maxwell2024\\_probe\\analyze_point_reduction.py"
+    },
+    {
+      "path": "probe/analyze_profiles.py",
+      "bytes": 3251,
+      "sha256": "ecf7322c541b2d2a011bdd2a8dfa823249a7bbd8aa2469b18bec9959c95a9f58",
+      "source": "C:\\ansys maxwell2024\\_probe\\analyze_profiles.py"
+    },
+    {
+      "path": "probe/apply_prod_patch2.py",
+      "bytes": 3946,
+      "sha256": "9d689521d2fcf3883f3e4a9616fde5014f83f0651dbd5c129a31ef66cb47da39",
+      "source": "C:\\ansys maxwell2024\\_probe\\apply_prod_patch2.py"
+    },
+    {
+      "path": "probe/apply_prod_patch3.py",
+      "bytes": 3257,
+      "sha256": "d25b5585b69db12b1eb2cd84c7b9bef7ddf3b078297dddef22887c682a03c55d",
+      "source": "C:\\ansys maxwell2024\\_probe\\apply_prod_patch3.py"
+    },
+    {
+      "path": "probe/apply_prod_patch4.py",
+      "bytes": 3991,
+      "sha256": "254d59fcbae6385f2e3a588f3e53578355228ffaccbfada7c9cc80c52b3e22bd",
+      "source": "C:\\ansys maxwell2024\\_probe\\apply_prod_patch4.py"
+    },
+    {
+      "path": "probe/apply_prod_patch5.py",
+      "bytes": 4924,
+      "sha256": "c4bfe5376b4579d83906a6e7d73d9813e815d3b6c20e7d254d98d02736c22dcc",
+      "source": "C:\\ansys maxwell2024\\_probe\\apply_prod_patch5.py"
+    },
+    {
+      "path": "probe/apply_prod_patches.py",
+      "bytes": 7953,
+      "sha256": "539dacd1c76d8fcbdaa69f47b54d0244d5d2baf698114b304afaf93d490139e7",
+      "source": "C:\\ansys maxwell2024\\_probe\\apply_prod_patches.py"
+    },
+    {
+      "path": "probe/ascii_preview.py",
+      "bytes": 2424,
+      "sha256": "4ec7d062d743268560aa6be462c98ba2ec452e589b8850324abbec566e17d50f",
+      "source": "C:\\ansys maxwell2024\\_probe\\ascii_preview.py"
+    },
+    {
+      "path": "probe/audit_batch1.py",
+      "bytes": 6132,
+      "sha256": "69fd10deeb5d968d79b47694bd15c8083e21549a6f2c4986d01c3a107b247198",
+      "source": "C:\\ansys maxwell2024\\_probe\\audit_batch1.py"
+    },
+    {
+      "path": "probe/audit_coil_data.py",
+      "bytes": 9302,
+      "sha256": "d32601fc334b80110c18fa52ddc30931303a6cc214b54a2468d2bcae9dc63bcd",
+      "source": "C:\\ansys maxwell2024\\_probe\\audit_coil_data.py"
+    },
+    {
+      "path": "probe/batch.log",
+      "bytes": 1092,
+      "sha256": "0c22349b24faa025455f712de5d0ea1c5238c569311c904cdacc839fd4b8e159",
+      "source": "C:\\ansys maxwell2024\\_probe\\batch.log"
+    },
+    {
+      "path": "probe/build_b1_plan.py",
+      "bytes": 8566,
+      "sha256": "12aed50ed7722bb072adaf4e789939831119f73c4a26c8e456909d1284b61c83",
+      "source": "C:\\ansys maxwell2024\\_probe\\build_b1_plan.py"
+    },
+    {
+      "path": "probe/build_b2_plan.py",
+      "bytes": 19748,
+      "sha256": "a3fff0072c1b6142c49aa32d8cd92bda319b703d4018fe166870585a4156b8fc",
+      "source": "C:\\ansys maxwell2024\\_probe\\build_b2_plan.py"
+    },
+    {
+      "path": "probe/build_lc120.py",
+      "bytes": 3387,
+      "sha256": "3d2408363a551a47d028aff7e198db75dd9e00563e7a2a4999021c7884481a6e",
+      "source": "C:\\ansys maxwell2024\\_probe\\build_lc120.py"
+    },
+    {
+      "path": "probe/build_newlead_copy.py",
+      "bytes": 7467,
+      "sha256": "fa11af90a3aa36cfdb8cbb80be5837d3b02838d8a982433df0b8c8ebf94e8c90",
+      "source": "C:\\ansys maxwell2024\\_probe\\build_newlead_copy.py"
+    },
+    {
+      "path": "probe/build_newlead_copy2.py",
+      "bytes": 6589,
+      "sha256": "f1893041da60d6a25bac4fbd7afd4d948a20aa4aff77fc856c5aa4ef10a9e9ec",
+      "source": "C:\\ansys maxwell2024\\_probe\\build_newlead_copy2.py"
+    },
+    {
+      "path": "probe/build_newlead_copy3.py",
+      "bytes": 6999,
+      "sha256": "0be5d552aef9a0c30e5c76293a946a29278db121de64c668249047df0cde4e9e",
+      "source": "C:\\ansys maxwell2024\\_probe\\build_newlead_copy3.py"
+    },
+    {
+      "path": "probe/build_newlead_copy4.py",
+      "bytes": 5829,
+      "sha256": "79d94dcf7983517e7e4b43c6ca2b90c3921258a0579ead9b67b0bff847120ab9",
+      "source": "C:\\ansys maxwell2024\\_probe\\build_newlead_copy4.py"
+    },
+    {
+      "path": "probe/build_newlead_final.py",
+      "bytes": 5854,
+      "sha256": "5a7c89a1eb283f3521fc7e9128601efe0b60e49787f059524147ea92bbb73b7c",
+      "source": "C:\\ansys maxwell2024\\_probe\\build_newlead_final.py"
+    },
+    {
+      "path": "probe/capture_aedt_windows.py",
+      "bytes": 6401,
+      "sha256": "11cbdd804181087376cdc908f2dcba459fbe4ed7be9df8a45bf14bb046c22836",
+      "source": "C:\\ansys maxwell2024\\_probe\\capture_aedt_windows.py"
+    },
+    {
+      "path": "probe/case_b1_0186_figs.py",
+      "bytes": 30286,
+      "sha256": "f6cc7f9924b11eb1c4c960b1e1967b08b2ed0d1cd01b172a6a7cc8170c7a5fad",
+      "source": "C:\\ansys maxwell2024\\_probe\\case_b1_0186_figs.py"
+    },
+    {
+      "path": "probe/case_b1_0186_figs14_15.py",
+      "bytes": 40932,
+      "sha256": "38e41181b74d221a8e8f97061103a760050155b8d997744757af7c46d6c791f1",
+      "source": "C:\\ansys maxwell2024\\_probe\\case_b1_0186_figs14_15.py"
+    },
+    {
+      "path": "probe/case_b1_0186_figs_views.py",
+      "bytes": 36547,
+      "sha256": "f610740d28f9aa0555c80b1cba92ae50e6ae74cbbe8b6537fe890d3094f6410a",
+      "source": "C:\\ansys maxwell2024\\_probe\\case_b1_0186_figs_views.py"
+    },
+    {
+      "path": "probe/case_b1_0186_geom.py",
+      "bytes": 5248,
+      "sha256": "27b631f55b4a6f10869698712c1f26880319e274c621ed55982d8d03577219c1",
+      "source": "C:\\ansys maxwell2024\\_probe\\case_b1_0186_geom.py"
+    },
+    {
+      "path": "probe/chain_p4.py",
+      "bytes": 4566,
+      "sha256": "8e7e1abbf085d56dddc5b4194348e68e656d7e5a66fc1dbdb4687e541effce47",
+      "source": "C:\\ansys maxwell2024\\_probe\\chain_p4.py"
+    },
+    {
+      "path": "probe/check_L11_L22.py",
+      "bytes": 2158,
+      "sha256": "6ca7696f186c57646b8f7ce9ac1906c909eb208286bbdf9a318bcf142efc8da0",
+      "source": "C:\\ansys maxwell2024\\_probe\\check_L11_L22.py"
+    },
+    {
+      "path": "probe/check_bodies.py",
+      "bytes": 2495,
+      "sha256": "ea3440adbc051369264bd588278b3ca6dcf492f17a2cbc43ce9b7d5378a245c5",
+      "source": "C:\\ansys maxwell2024\\_probe\\check_bodies.py"
+    },
+    {
+      "path": "probe/check_corner_gap.py",
+      "bytes": 3993,
+      "sha256": "11c8ed7695bb5f4a58f8b77e5c1c54161b1423a37d67c413bfcb52405ed17287",
+      "source": "C:\\ansys maxwell2024\\_probe\\check_corner_gap.py"
+    },
+    {
+      "path": "probe/check_div144.py",
+      "bytes": 4089,
+      "sha256": "5f6247c70a3d15c0cdea8d497e1ded83c6677cb6607fc1b67ffbe6265e20bdbc",
+      "source": "C:\\ansys maxwell2024\\_probe\\check_div144.py"
+    },
+    {
+      "path": "probe/check_ferrite_phase.py",
+      "bytes": 2352,
+      "sha256": "a7cda8e61b4d5ed3ba98f244af0d6860dd7ac503a9486c260b8b138069e16f88",
+      "source": "C:\\ansys maxwell2024\\_probe\\check_ferrite_phase.py"
+    },
+    {
+      "path": "probe/check_phase_sensitivity.py",
+      "bytes": 2855,
+      "sha256": "9a89a17cfdbcdd0696c30548228d4d11f0d44b1bf29a824ab8b6d68038c2d67d",
+      "source": "C:\\ansys maxwell2024\\_probe\\check_phase_sensitivity.py"
+    },
+    {
+      "path": "probe/check_saved_text.py",
+      "bytes": 2932,
+      "sha256": "513b1f31133a663054d5b0317ffc2191170ddbba49f1d0e0dc70de80d9a57e2a",
+      "source": "C:\\ansys maxwell2024\\_probe\\check_saved_text.py"
+    },
+    {
+      "path": "probe/check_saved_text2.py",
+      "bytes": 2774,
+      "sha256": "4d62ec960503f0f7f45d08f4477bd5b70c395a98522ca82245748063c3fd14d4",
+      "source": "C:\\ansys maxwell2024\\_probe\\check_saved_text2.py"
+    },
+    {
+      "path": "probe/check_saved_text3.py",
+      "bytes": 2777,
+      "sha256": "7eed705213881a5e03e3fbfcc103f14564cc3043138ff89e810f8309b9f2ed38",
+      "source": "C:\\ansys maxwell2024\\_probe\\check_saved_text3.py"
+    },
+    {
+      "path": "probe/coil_anchor.py",
+      "bytes": 968,
+      "sha256": "22cdaeb0de71b1bdcfdad79d062b7d8e213136bf9c08ff26e9b912b90f25a92d",
+      "source": "C:\\ansys maxwell2024\\_probe\\coil_anchor.py"
+    },
+    {
+      "path": "probe/coil_fit.py",
+      "bytes": 3264,
+      "sha256": "ca695cda1eab1764a70d6eadb44f98e706cb88d10400593d8d978183a41c882f",
+      "source": "C:\\ansys maxwell2024\\_probe\\coil_fit.py"
+    },
+    {
+      "path": "probe/coil_fit2.py",
+      "bytes": 3437,
+      "sha256": "68ca8ef3a5df704a081beeb0c726a594c630c8e145a6ca62abb44f4c7379291d",
+      "source": "C:\\ansys maxwell2024\\_probe\\coil_fit2.py"
+    },
+    {
+      "path": "probe/coil_fit3.py",
+      "bytes": 2758,
+      "sha256": "6a7a5fcda615a91c01411e8af7ded975361f6e3a6529d3e34fe064a9f595b524",
+      "source": "C:\\ansys maxwell2024\\_probe\\coil_fit3.py"
+    },
+    {
+      "path": "probe/coil_gen.py",
+      "bytes": 4457,
+      "sha256": "311ab2e15ee13269ddf77607c396737684e1f8dcb6c276526704d259ba3f4043",
+      "source": "C:\\ansys maxwell2024\\_probe\\coil_gen.py"
+    },
+    {
+      "path": "probe/coil_outer.py",
+      "bytes": 1672,
+      "sha256": "334fb09d8493833a7038c9d2416536a15f73e86886099d59d4670f65bff25dbc",
+      "source": "C:\\ansys maxwell2024\\_probe\\coil_outer.py"
+    },
+    {
+      "path": "probe/coil_param_rebuild.py",
+      "bytes": 10714,
+      "sha256": "8e46b1fcef76ed2b75615441856e3b509155b9047c507952a0f5aa06045c8f33",
+      "source": "C:\\ansys maxwell2024\\_probe\\coil_param_rebuild.py"
+    },
+    {
+      "path": "probe/coil_rule_probe.py",
+      "bytes": 1888,
+      "sha256": "2c4aba5f1106ed87eefa10a21cb07ee8f6b04ca49c566eb54e10f8446e951320",
+      "source": "C:\\ansys maxwell2024\\_probe\\coil_rule_probe.py"
+    },
+    {
+      "path": "probe/coil_rule_probe2.py",
+      "bytes": 1728,
+      "sha256": "0d2258341eaa2952b500ac8c08b44d06487ecea6d89757615f236c0c4462d505",
+      "source": "C:\\ansys maxwell2024\\_probe\\coil_rule_probe2.py"
+    },
+    {
+      "path": "probe/coil_shape.py",
+      "bytes": 2678,
+      "sha256": "09362bad7dbda140d5e511f761633296d5a40dbdf796c2d4d39e1c5fa21d2f31",
+      "source": "C:\\ansys maxwell2024\\_probe\\coil_shape.py"
+    },
+    {
+      "path": "probe/compare_results.py",
+      "bytes": 1820,
+      "sha256": "07cb370521d8661fb7dfb55644cd8a259e52865340cf1edd995210060f27bfa3",
+      "source": "C:\\ansys maxwell2024\\_probe\\compare_results.py"
+    },
+    {
+      "path": "probe/core_speed_test.py",
+      "bytes": 4007,
+      "sha256": "450220417843fe7e77cf9740899c2cf149bdc1516ce3c75fd15e9d22e6cf356a",
+      "source": "C:\\ansys maxwell2024\\_probe\\core_speed_test.py"
+    },
+    {
+      "path": "probe/corner_defect_scope.py",
+      "bytes": 3718,
+      "sha256": "65f413e66ce6cfe0da545b7ab5d0a27ad7366a4fd5e6261cbfe94d402d366c41",
+      "source": "C:\\ansys maxwell2024\\_probe\\corner_defect_scope.py"
+    },
+    {
+      "path": "probe/crop_aedt_shots.py",
+      "bytes": 2329,
+      "sha256": "be8be6125a90a5ce9d0dc149d2adc24c528b2226bc7430c2de8eaeecb05847c6",
+      "source": "C:\\ansys maxwell2024\\_probe\\crop_aedt_shots.py"
+    },
+    {
+      "path": "probe/cross_check_W.py",
+      "bytes": 2877,
+      "sha256": "f30abc8bb7da2387d833daaeb56a1f9c9b954962d43b2c65ae366cab6b2353cb",
+      "source": "C:\\ansys maxwell2024\\_probe\\cross_check_W.py"
+    },
+    {
+      "path": "probe/curve_path_test.py",
+      "bytes": 2893,
+      "sha256": "ed0b4b96dfc11c91111fd4fa311b6753a6104da5fc407c1f91f707711f51ef3e",
+      "source": "C:\\ansys maxwell2024\\_probe\\curve_path_test.py"
+    },
+    {
+      "path": "probe/device_login.py",
+      "bytes": 5996,
+      "sha256": "13bd55b70a153f287cb756de0f3f7472a32a82a65595521144848a1d79814c1a",
+      "source": "C:\\ansys maxwell2024\\_probe\\device_login.py"
+    },
+    {
+      "path": "probe/diag_hang.py",
+      "bytes": 5207,
+      "sha256": "cc7e71ddeb47b12c053c4a85f17bb1ac0af9043e833c59b8c36a6eb700738404",
+      "source": "C:\\ansys maxwell2024\\_probe\\diag_hang.py"
+    },
+    {
+      "path": "probe/diag_profile_status.py",
+      "bytes": 1931,
+      "sha256": "b0d67cb4555e8a73b372c3dd23f44c83ddbb9b31803b4c348e66ddb226385287",
+      "source": "C:\\ansys maxwell2024\\_probe\\diag_profile_status.py"
+    },
+    {
+      "path": "probe/diag_saved.py",
+      "bytes": 1794,
+      "sha256": "bb6ae247150118b359da9a087bffeb5b530f509ce82a62637789ef36d76fcbec",
+      "source": "C:\\ansys maxwell2024\\_probe\\diag_saved.py"
+    },
+    {
+      "path": "probe/diag_wptg.py",
+      "bytes": 3525,
+      "sha256": "4340dae0e3d905d2df48920c95babf5726712638cd95eb9d37afeaacc386c0db",
+      "source": "C:\\ansys maxwell2024\\_probe\\diag_wptg.py"
+    },
+    {
+      "path": "probe/dig_blocks.py",
+      "bytes": 4004,
+      "sha256": "6225717ae466cce525154375d2ae9523d0ed6e1da3e6c2fd5a826bf9953126b0",
+      "source": "C:\\ansys maxwell2024\\_probe\\dig_blocks.py"
+    },
+    {
+      "path": "probe/dig_order.py",
+      "bytes": 3851,
+      "sha256": "6e7a244aae91a9b9e310c2c5557007c9156a590242cecddb876a4b8ecf4137df",
+      "source": "C:\\ansys maxwell2024\\_probe\\dig_order.py"
+    },
+    {
+      "path": "probe/dig_w14.py",
+      "bytes": 4613,
+      "sha256": "ad88d5262859c08994b77bbffe83faaf3d75b560e0c251c4e16973aa909cd458",
+      "source": "C:\\ansys maxwell2024\\_probe\\dig_w14.py"
+    },
+    {
+      "path": "probe/div144.py",
+      "bytes": 5705,
+      "sha256": "d3bfa72fe0527cdf12965cb6d8a51316bee35c84fd092506067030c3f7682739",
+      "source": "C:\\ansys maxwell2024\\_probe\\div144.py"
+    },
+    {
+      "path": "probe/draw_coil_lc120.py",
+      "bytes": 3632,
+      "sha256": "af0139bf9b6b4f792924f94a28ba4a0a69baad237b543b6dc289a8bcc026b3de",
+      "source": "C:\\ansys maxwell2024\\_probe\\draw_coil_lc120.py"
+    },
+    {
+      "path": "probe/estimate_L.py",
+      "bytes": 4501,
+      "sha256": "6b879ee062b9b1a1176f4eaf3382ebd8d68d91fa0046518a3ab972a3ea3be005",
+      "source": "C:\\ansys maxwell2024\\_probe\\estimate_L.py"
+    },
+    {
+      "path": "probe/estimate_lead_effect.py",
+      "bytes": 2871,
+      "sha256": "d167ba78587d00d1a07bd29bcdd77427b3c5079e1b1551517428d8d4dd23a3c1",
+      "source": "C:\\ansys maxwell2024\\_probe\\estimate_lead_effect.py"
+    },
+    {
+      "path": "probe/extract_leads.py",
+      "bytes": 3076,
+      "sha256": "b560652f8d78ed698c7be4d50852aa80d5f5d70420ba14d36227bec444e5da70",
+      "source": "C:\\ansys maxwell2024\\_probe\\extract_leads.py"
+    },
+    {
+      "path": "probe/extract_paths.py",
+      "bytes": 2256,
+      "sha256": "c0221469ecf2d0a9f4b1fd6b83742012b15cdc7a544d1dc71f5a0ff5e5eb2b7b",
+      "source": "C:\\ansys maxwell2024\\_probe\\extract_paths.py"
+    },
+    {
+      "path": "probe/fetch_repo.py",
+      "bytes": 5519,
+      "sha256": "76c1b909974b227ed947c1516204f7763a249e066e90240d234c245ec7685fe2",
+      "source": "C:\\ansys maxwell2024\\_probe\\fetch_repo.py"
+    },
+    {
+      "path": "probe/fig1415_bounds_check.py",
+      "bytes": 2516,
+      "sha256": "fb19bf747add24f131008d4f82faf009bb711e3861bb701d0906e64209d8a1e1",
+      "source": "C:\\ansys maxwell2024\\_probe\\fig1415_bounds_check.py"
+    },
+    {
+      "path": "probe/fig1415_layout_check.py",
+      "bytes": 3589,
+      "sha256": "02a83d4fd931c8d71c552115ce83572e4cd102c15e24b1ef25293636fdff2358",
+      "source": "C:\\ansys maxwell2024\\_probe\\fig1415_layout_check.py"
+    },
+    {
+      "path": "probe/fig1415_occlusion_check.py",
+      "bytes": 2904,
+      "sha256": "9e8bdface3e6a6f755270b6d2180c9ed5d873381bc710c79513c1d13232feca7",
+      "source": "C:\\ansys maxwell2024\\_probe\\fig1415_occlusion_check.py"
+    },
+    {
+      "path": "probe/fig14_metrics.py",
+      "bytes": 4110,
+      "sha256": "07bd1d0f800f135f085fc6643ded0e2daa4388f59f043342f3101c1bd7842894",
+      "source": "C:\\ansys maxwell2024\\_probe\\fig14_metrics.py"
+    },
+    {
+      "path": "probe/fig14_metrics2.py",
+      "bytes": 2380,
+      "sha256": "79ef3aac328a122091199567ab9702545f76e184e28af7cf0e7c81e2c03889f8",
+      "source": "C:\\ansys maxwell2024\\_probe\\fig14_metrics2.py"
+    },
+    {
+      "path": "probe/fig14_metrics3.py",
+      "bytes": 3134,
+      "sha256": "8cd8f5da412dba8f0398df5bb6897c63b912ea54248a6963bb3c92ee5babe471",
+      "source": "C:\\ansys maxwell2024\\_probe\\fig14_metrics3.py"
+    },
+    {
+      "path": "probe/fig14_metrics4.py",
+      "bytes": 3730,
+      "sha256": "67dd26ff25db7f833e1e0584de3446a6acd5838a288f555fbfd6b78ea8e1fba0",
+      "source": "C:\\ansys maxwell2024\\_probe\\fig14_metrics4.py"
+    },
+    {
+      "path": "probe/fig14_path_ascii.py",
+      "bytes": 1657,
+      "sha256": "2ac59532942fb2de80f973ded4686ac6c5ce1b440f4c26f62a133a4a31ae8dc1",
+      "source": "C:\\ansys maxwell2024\\_probe\\fig14_path_ascii.py"
+    },
+    {
+      "path": "probe/fig15_crossing_check.py",
+      "bytes": 2566,
+      "sha256": "da9e210e2f161d111214a95e03b61ad7fa3d14350b5842ecd1d60dbe31012e52",
+      "source": "C:\\ansys maxwell2024\\_probe\\fig15_crossing_check.py"
+    },
+    {
+      "path": "probe/final_check.py",
+      "bytes": 3877,
+      "sha256": "a9c7a1dcf2e08f6da81bd7c300133666acaad39c5b5572a300347030b8c89343",
+      "source": "C:\\ansys maxwell2024\\_probe\\final_check.py"
+    },
+    {
+      "path": "probe/find_designs.py",
+      "bytes": 1889,
+      "sha256": "08cae2d516730d1b4022697ee808e6730f7ebc44615da7e26a7932f80bdbd6a9",
+      "source": "C:\\ansys maxwell2024\\_probe\\find_designs.py"
+    },
+    {
+      "path": "probe/find_kinks.py",
+      "bytes": 2252,
+      "sha256": "9285a5e813cf1704ab6d973f004e3f2bd892f6fe704c788f70cc7756d59c3d85",
+      "source": "C:\\ansys maxwell2024\\_probe\\find_kinks.py"
+    },
+    {
+      "path": "probe/fix_conductor_api.py",
+      "bytes": 2065,
+      "sha256": "86f61317639a367e2af977734016d2353954d554c602f7da1d3cf340c6b0f99a",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_conductor_api.py"
+    },
+    {
+      "path": "probe/fix_conductor_text.py",
+      "bytes": 1386,
+      "sha256": "a4f24b7aa8e5e4f4144125e4a3a4c7a0e389dcab69c3cf677277233b9b891cbe",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_conductor_text.py"
+    },
+    {
+      "path": "probe/fix_corner_remap.py",
+      "bytes": 5170,
+      "sha256": "8e40b1331c21c274a3c1a1668ea2376d46dcba9e9c4dba8ab0a616b33f83186c",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_corner_remap.py"
+    },
+    {
+      "path": "probe/fix_corner_remap2.py",
+      "bytes": 4959,
+      "sha256": "89d6797a93bc6804a9725de354189f8c7b71fc04ea1195e86ee57d7b004c10af",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_corner_remap2.py"
+    },
+    {
+      "path": "probe/fix_corner_remap3.py",
+      "bytes": 4394,
+      "sha256": "73f1a72439eb313b0fb0a120b6a4557b1fc75b06861742188106e0bb89cffa39",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_corner_remap3.py"
+    },
+    {
+      "path": "probe/fix_corner_remap4.py",
+      "bytes": 4896,
+      "sha256": "5f3b9becdd7e814bae89803efdf336833fc36327fba7107e79cdc28aa12dc7e5",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_corner_remap4.py"
+    },
+    {
+      "path": "probe/fix_corner_remap5.py",
+      "bytes": 4602,
+      "sha256": "cad382dcda1fb8a4c5f2329b08c2284d1ba7cea5d1717b3a73a0e97836d9649c",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_corner_remap5.py"
+    },
+    {
+      "path": "probe/fix_leads.py",
+      "bytes": 4390,
+      "sha256": "9328a389db61120f211b75fcc6e329a41a33491801f55d08440ea1db35499cf7",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_leads.py"
+    },
+    {
+      "path": "probe/fix_parentbnd.py",
+      "bytes": 2345,
+      "sha256": "ba843c3ff10950ca3a2d0c6bd857de338ad14eb23feb54b91eebcac16a88cef7",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_parentbnd.py"
+    },
+    {
+      "path": "probe/fix_winding_api.py",
+      "bytes": 2848,
+      "sha256": "7b621d62da9daa87bd3ff0869b87d24fb56b98971e6ba5ad0d264cb906180b8a",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_winding_api.py"
+    },
+    {
+      "path": "probe/fix_winding_link.py",
+      "bytes": 2870,
+      "sha256": "a40d6889fa38b04f7b5b2e788c0b6919b92f595a528e79263bcb3cab247ace84",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_winding_link.py"
+    },
+    {
+      "path": "probe/fix_winding_text.py",
+      "bytes": 2774,
+      "sha256": "a3e6d6e91122912e093806c7aedc6e7d17f4cd6179a60412190c6729cce3eaab",
+      "source": "C:\\ansys maxwell2024\\_probe\\fix_winding_text.py"
+    },
+    {
+      "path": "probe/followup_5_6.py",
+      "bytes": 12491,
+      "sha256": "e5a7f17bad95a00949c6331abc6f01328997a8be6a9d686e992e889df62d8200",
+      "source": "C:\\ansys maxwell2024\\_probe\\followup_5_6.py"
+    },
+    {
+      "path": "probe/gh_backup_model.py",
+      "bytes": 14417,
+      "sha256": "f320d59b090d21b8052f85e5fc2cdccb88bac1dc70bd80779ea82e5ca2aca5a1",
+      "source": "C:\\ansys maxwell2024\\_probe\\gh_backup_model.py"
+    },
+    {
+      "path": "probe/gh_diag.py",
+      "bytes": 2457,
+      "sha256": "87154263ccdb54b095fc600838998e9bd4b495e1d639c31d164d6d9bfe7acd90",
+      "source": "C:\\ansys maxwell2024\\_probe\\gh_diag.py"
+    },
+    {
+      "path": "probe/gh_preflight.py",
+      "bytes": 2239,
+      "sha256": "ddb547698f487a6d31fe108806dcc05ddb93bb9517742ee0e0ca70261b955857",
+      "source": "C:\\ansys maxwell2024\\_probe\\gh_preflight.py"
+    },
+    {
+      "path": "probe/gh_probe.py",
+      "bytes": 1174,
+      "sha256": "7bd81ff902b6413f00cd3ec42f38dc8c79e27777c0d31d097312b4ee59f7d63e",
+      "source": "C:\\ansys maxwell2024\\_probe\\gh_probe.py"
+    },
+    {
+      "path": "probe/gh_verify_backup.py",
+      "bytes": 3757,
+      "sha256": "ebf006f5cac583437a47b569f15ae0790a7941576ddff182ffb82fa263a45a4f",
+      "source": "C:\\ansys maxwell2024\\_probe\\gh_verify_backup.py"
+    },
+    {
+      "path": "probe/git_probe.py",
+      "bytes": 1765,
+      "sha256": "049611299cfffc26d9d03acb32ceb5b7c67b332653645828fbd3251fb870e723",
+      "source": "C:\\ansys maxwell2024\\_probe\\git_probe.py"
+    },
+    {
+      "path": "probe/git_probe2.py",
+      "bytes": 1807,
+      "sha256": "d6b8e4fb88cc097387e133a1b19f11c957123e6abd3a7f2e8c3bdde92bfaf3bd",
+      "source": "C:\\ansys maxwell2024\\_probe\\git_probe2.py"
+    },
+    {
+      "path": "probe/install_to_wpt.py",
+      "bytes": 6722,
+      "sha256": "f70e0fda380d8656aa12d025e96c1f37010614ffdaa38897e667b4f873eed38b",
+      "source": "C:\\ansys maxwell2024\\_probe\\install_to_wpt.py"
+    },
+    {
+      "path": "probe/live_probe.py",
+      "bytes": 2496,
+      "sha256": "d569124d368d522b97facbf2b74526b10778f9c02ff0e4bffe713b79c1f88f5d",
+      "source": "C:\\ansys maxwell2024\\_probe\\live_probe.py"
+    },
+    {
+      "path": "probe/locate_worst.py",
+      "bytes": 2350,
+      "sha256": "d008a0263ed8dfd775a0f604ae394a8793148824790d3bee5e4b100b5074ae00",
+      "source": "C:\\ansys maxwell2024\\_probe\\locate_worst.py"
+    },
+    {
+      "path": "probe/lookup_refs.py",
+      "bytes": 880,
+      "sha256": "2e8f5c415294b985ef78029abbe5d1f7164c78fe070ad0fada9128604cea9217",
+      "source": "C:\\ansys maxwell2024\\_probe\\lookup_refs.py"
+    },
+    {
+      "path": "probe/make_clean_project.py",
+      "bytes": 6947,
+      "sha256": "862fb4ee9613a68559e93c7ad2fb97881e01e75fd5c5b78295c8bb1fc5252340",
+      "source": "C:\\ansys maxwell2024\\_probe\\make_clean_project.py"
+    },
+    {
+      "path": "probe/make_lc_batch.py",
+      "bytes": 26145,
+      "sha256": "907dc90c849de2f097a70d9a796655cfb619b7a5acd450446dd6a4e8db50944d",
+      "source": "C:\\ansys maxwell2024\\_probe\\make_lc_batch.py"
+    },
+    {
+      "path": "probe/make_sample_plan.py",
+      "bytes": 3160,
+      "sha256": "e6f08725ab03fb9fb97922a37a3163c618303b75128cb3dff7aa726af4d146ae",
+      "source": "C:\\ansys maxwell2024\\_probe\\make_sample_plan.py"
+    },
+    {
+      "path": "probe/map_coils.py",
+      "bytes": 2317,
+      "sha256": "e16a5c89217a1dda1d4a27e87d5c97102ac98344861c61b181887fb79939c8b3",
+      "source": "C:\\ansys maxwell2024\\_probe\\map_coils.py"
+    },
+    {
+      "path": "probe/matrix_meshlimit.py",
+      "bytes": 10065,
+      "sha256": "e23587b20750a898fa297e6c3439bad59f34f6048eae065959a10e932b354a40",
+      "source": "C:\\ansys maxwell2024\\_probe\\matrix_meshlimit.py"
+    },
+    {
+      "path": "probe/md5check.py",
+      "bytes": 482,
+      "sha256": "586c1799fb4623e9d70dc708c272895d8ec3e49151b3dd5bb3b067d1eb3ea090",
+      "source": "C:\\ansys maxwell2024\\_probe\\md5check.py"
+    },
+    {
+      "path": "probe/net_probe.py",
+      "bytes": 1248,
+      "sha256": "68d70235de6f8ffec4d8ad0776e19e4e20dbeba82e8ed17f11e0a59fac872f05",
+      "source": "C:\\ansys maxwell2024\\_probe\\net_probe.py"
+    },
+    {
+      "path": "probe/nongui_s4u_result.txt",
+      "bytes": 1027,
+      "sha256": "0c01d132dba6cf5734f7047ed43376aef3eb5518cc91dcd3552d477a79aa58f4",
+      "source": "C:\\ansys maxwell2024\\_probe\\nongui_s4u_result.txt"
+    },
+    {
+      "path": "probe/nongui_s4u_test.py",
+      "bytes": 1933,
+      "sha256": "3b0ecaac5f60a408abdc59807f6d4003120f2e44b04bd6b87ba3b5c06fc53ffe",
+      "source": "C:\\ansys maxwell2024\\_probe\\nongui_s4u_test.py"
+    },
+    {
+      "path": "probe/patch_cores.py",
+      "bytes": 3002,
+      "sha256": "29a2b04b3306e2798f364f24c96ce2b9fd8472dcfa4615935785729b0793b302",
+      "source": "C:\\ansys maxwell2024\\_probe\\patch_cores.py"
+    },
+    {
+      "path": "probe/patch_paths.py",
+      "bytes": 3615,
+      "sha256": "90efd6fd91b725a5696291fdfec3646d89d73a74d2263e41040f12965dc6eb0d",
+      "source": "C:\\ansys maxwell2024\\_probe\\patch_paths.py"
+    },
+    {
+      "path": "probe/patch_wpt_contract_mirror.py",
+      "bytes": 5127,
+      "sha256": "e16c19a0c27b1fef047deff774e10600fd51c900f82cbb9290d5eaabecea7bc8",
+      "source": "C:\\ansys maxwell2024\\_probe\\patch_wpt_contract_mirror.py"
+    },
+    {
+      "path": "probe/pick_points.py",
+      "bytes": 1172,
+      "sha256": "8d0cf2e149b735614128ed09836de99f5f6f779ad3fde8fa06d7caa4dc5f20a6",
+      "source": "C:\\ansys maxwell2024\\_probe\\pick_points.py"
+    },
+    {
+      "path": "probe/poc7_meshreuse.py",
+      "bytes": 9158,
+      "sha256": "62224afb75e118a2ff9c50a53d08e588aa514465d7c0686bffe2ff4fad22c565",
+      "source": "C:\\ansys maxwell2024\\_probe\\poc7_meshreuse.py"
+    },
+    {
+      "path": "probe/poc7b_donor.py",
+      "bytes": 12243,
+      "sha256": "441c3ad4babbc70ee9e3aae6eaded194ea2f2bfdde2d6eaed535a2c5e71749eb",
+      "source": "C:\\ansys maxwell2024\\_probe\\poc7b_donor.py"
+    },
+    {
+      "path": "probe/probe_meshreuse.py",
+      "bytes": 3951,
+      "sha256": "697c481112c8bd455879975bfa5fbbf9128e38ed9bf1b2e5650ab7100b69d289",
+      "source": "C:\\ansys maxwell2024\\_probe\\probe_meshreuse.py"
+    },
+    {
+      "path": "probe/probe_region.py",
+      "bytes": 3959,
+      "sha256": "8091e0548b128a5fdfb59e2cab0a502e53ed8ad78449c2880f7ce87d3c482616",
+      "source": "C:\\ansys maxwell2024\\_probe\\probe_region.py"
+    },
+    {
+      "path": "probe/pyaedt_report.json",
+      "bytes": 70240,
+      "sha256": "b8f8b1800fb305ba7ce99ef717ea45ccb37a27f43d7b3390fd6602a98c0d1e17",
+      "source": "C:\\ansys maxwell2024\\_probe\\pyaedt_report.json"
+    },
+    {
+      "path": "probe/queueA2_stack.py",
+      "bytes": 8129,
+      "sha256": "775c89b41eb0ee596f1a381c8dba16e4a2d5ab9d49fdf91447a9f5b26ccdd65d",
+      "source": "C:\\ansys maxwell2024\\_probe\\queueA2_stack.py"
+    },
+    {
+      "path": "probe/queueA_mesh_switches.py",
+      "bytes": 12624,
+      "sha256": "183d8ef46928b8250471c5242fc7eab205401cf9ec205b8feb9e307348197096",
+      "source": "C:\\ansys maxwell2024\\_probe\\queueA_mesh_switches.py"
+    },
+    {
+      "path": "probe/queueCFG_config_region.py",
+      "bytes": 9649,
+      "sha256": "d1638213ead68ec99d75d3c389cd0a63860e95faadb5c301c28016084393b4f8",
+      "source": "C:\\ansys maxwell2024\\_probe\\queueCFG_config_region.py"
+    },
+    {
+      "path": "probe/queueE2E_case.py",
+      "bytes": 9657,
+      "sha256": "5a0f0be0dd662452b9905e49895ccf4b12e3858eb39224a4994043589d0ca37d",
+      "source": "C:\\ansys maxwell2024\\_probe\\queueE2E_case.py"
+    },
+    {
+      "path": "probe/queueFB_fallback.py",
+      "bytes": 7916,
+      "sha256": "bf824c0b73c4102d62d494f9154dac338458d30734733e83545bf1f8a0c9db94",
+      "source": "C:\\ansys maxwell2024\\_probe\\queueFB_fallback.py"
+    },
+    {
+      "path": "probe/queueGPU_test.py",
+      "bytes": 9154,
+      "sha256": "b1e161bcb9105448f1ee2467ad2a96bd6f0e4e5ad0c09eb149b04e67a1abe1fc",
+      "source": "C:\\ansys maxwell2024\\_probe\\queueGPU_test.py"
+    },
+    {
+      "path": "probe/queueMC_multi_case.py",
+      "bytes": 11615,
+      "sha256": "3c3ac8d2d53da2e4bb0b494e4f2b85659389705511760671a036dc588f793efa",
+      "source": "C:\\ansys maxwell2024\\_probe\\queueMC_multi_case.py"
+    },
+    {
+      "path": "probe/queueMax_stack.py",
+      "bytes": 10169,
+      "sha256": "af5f33a49cd723f7ba0d64f1aab7cbe78602b8d50053540b85fec8d1b3ee804a",
+      "source": "C:\\ansys maxwell2024\\_probe\\queueMax_stack.py"
+    },
+    {
+      "path": "probe/queuePR_prod_region.py",
+      "bytes": 8034,
+      "sha256": "da9e978597a714827e5a7a4435af592abe1783757cb942e6a22d3d482936b98e",
+      "source": "C:\\ansys maxwell2024\\_probe\\queuePR_prod_region.py"
+    },
+    {
+      "path": "probe/queueRG_region_compare.py",
+      "bytes": 8994,
+      "sha256": "dfe40e2927df165c8b973ba24a6ddbb93293a5c818bf244bfc20cb9cc844dbc1",
+      "source": "C:\\ansys maxwell2024\\_probe\\queueRG_region_compare.py"
+    },
+    {
+      "path": "probe/queue_b2_sweep.py",
+      "bytes": 5886,
+      "sha256": "79cdc94d11d5ffd38aaee2ccd718af0774d043c724d946e22ef4350c3e230e4a",
+      "source": "C:\\ansys maxwell2024\\_probe\\queue_b2_sweep.py"
+    },
+    {
+      "path": "probe/queue_p4_bisect.py",
+      "bytes": 6219,
+      "sha256": "14274a8240d4c7e78df3c6f04ab6384c5c5c07a4cdff72f4eefd28f2ab230ff9",
+      "source": "C:\\ansys maxwell2024\\_probe\\queue_p4_bisect.py"
+    },
+    {
+      "path": "probe/queue_p4_parallel.py",
+      "bytes": 4434,
+      "sha256": "ae59c711c2433f7541cc6aa299ba61dab914a1c67dd7938be1e97e84f1421d84",
+      "source": "C:\\ansys maxwell2024\\_probe\\queue_p4_parallel.py"
+    },
+    {
+      "path": "probe/queue_verify.py",
+      "bytes": 16045,
+      "sha256": "5cae43f68bd2a602670d0c939f968e274fe7b4b637950918e979462cf59bd38f",
+      "source": "C:\\ansys maxwell2024\\_probe\\queue_verify.py"
+    },
+    {
+      "path": "probe/rebuild_width_pipeline.py",
+      "bytes": 19604,
+      "sha256": "01e9cb3b4dabde79fdc3868737897a06ea604ee2923ab94303cf6d244d7a567e",
+      "source": "C:\\ansys maxwell2024\\_probe\\rebuild_width_pipeline.py"
+    },
+    {
+      "path": "probe/relax_test.py",
+      "bytes": 4163,
+      "sha256": "41162e4b3ab7886a1b18bdf341d3e9f3a57635634bae5fee9ed355c0f910b2bb",
+      "source": "C:\\ansys maxwell2024\\_probe\\relax_test.py"
+    },
+    {
+      "path": "probe/renumber_doc.py",
+      "bytes": 3630,
+      "sha256": "feecfc2a13c5e969cc2957aa56eadd0ee1318e540ebbb95374d5cf719ea44725",
+      "source": "C:\\ansys maxwell2024\\_probe\\renumber_doc.py"
+    },
+    {
+      "path": "probe/restore_model.py",
+      "bytes": 6871,
+      "sha256": "151523237aac7ff1144ce05a89108cca50a395d9623bc89eebabed2d5164025d",
+      "source": "C:\\ansys maxwell2024\\_probe\\restore_model.py"
+    },
+    {
+      "path": "probe/revert_cores.py",
+      "bytes": 2773,
+      "sha256": "a7fce3f8adcdab74819190b63df6e0e3d6233f63abe68140b764d129dcaae15f",
+      "source": "C:\\ansys maxwell2024\\_probe\\revert_cores.py"
+    },
+    {
+      "path": "probe/run8.py",
+      "bytes": 3534,
+      "sha256": "5fa6aa120de640aa90b45d7b522abef961bb34c91c5a44a0a8f42910cbf63c70",
+      "source": "C:\\ansys maxwell2024\\_probe\\run8.py"
+    },
+    {
+      "path": "probe/selfcheck_mirror.py",
+      "bytes": 4534,
+      "sha256": "535085aab90a70d0f84b1e354cd0d92628bea381dcff7b07ded6de80c30b76f0",
+      "source": "C:\\ansys maxwell2024\\_probe\\selfcheck_mirror.py"
+    },
+    {
+      "path": "probe/setup_12core_test.py",
+      "bytes": 3743,
+      "sha256": "81d41ccc2c301421a7d2b0cd51fef9062c21e75ad1630970e132075496d8c04e",
+      "source": "C:\\ansys maxwell2024\\_probe\\setup_12core_test.py"
+    },
+    {
+      "path": "probe/setup_24core_test.py",
+      "bytes": 3219,
+      "sha256": "3f5e0620ea898fca0b6b62f17a81af7f8ca3981ff6ba930a68eb2db9f331b6ff",
+      "source": "C:\\ansys maxwell2024\\_probe\\setup_24core_test.py"
+    },
+    {
+      "path": "probe/setup_baseline_test.py",
+      "bytes": 2883,
+      "sha256": "8b30e86521d3e032eddc692aa06caa1e0c3782f5094b5d1ae0a51edc3aefb812",
+      "source": "C:\\ansys maxwell2024\\_probe\\setup_baseline_test.py"
+    },
+    {
+      "path": "probe/setup_cn1_test.py",
+      "bytes": 5195,
+      "sha256": "148e8d4dee7fbd8d89ea01ff01fa53ebd814e430282ce325a9921a12f5f2b378",
+      "source": "C:\\ansys maxwell2024\\_probe\\setup_cn1_test.py"
+    },
+    {
+      "path": "probe/setup_leadsL_test.py",
+      "bytes": 2620,
+      "sha256": "3fe2bb44172c0897c3d03ebfc5a5bc94dba97df8c872e48ba091dbe326f9afb6",
+      "source": "C:\\ansys maxwell2024\\_probe\\setup_leadsL_test.py"
+    },
+    {
+      "path": "probe/setup_newlead_test.py",
+      "bytes": 3602,
+      "sha256": "6c8a60cf4fa33566f99793abbd7973cb4bf68c31982c1d988754a759ebc3d5c7",
+      "source": "C:\\ansys maxwell2024\\_probe\\setup_newlead_test.py"
+    },
+    {
+      "path": "probe/setup_test_run.py",
+      "bytes": 3257,
+      "sha256": "b2446bfac42800403ac774ffc4d790c7c73aeabf9859815585b5659a6200b11a",
+      "source": "C:\\ansys maxwell2024\\_probe\\setup_test_run.py"
+    },
+    {
+      "path": "probe/setup_test_run2.py",
+      "bytes": 4187,
+      "sha256": "372f1e47e231e807761d118a2ed2a609eaaa9f79d49b4c461d5b1919f5b7d103",
+      "source": "C:\\ansys maxwell2024\\_probe\\setup_test_run2.py"
+    },
+    {
+      "path": "probe/setup_tx1up_test.py",
+      "bytes": 2479,
+      "sha256": "d5b317982506995cc9277add01d8f6aacb90dce07455ff2e1ef4a27f08f52d7e",
+      "source": "C:\\ansys maxwell2024\\_probe\\setup_tx1up_test.py"
+    },
+    {
+      "path": "probe/shim_test.py",
+      "bytes": 762,
+      "sha256": "eb433696ec47c47104a4c2417710eb708d041dc1cf7552b95b69b67924c097ab",
+      "source": "C:\\ansys maxwell2024\\_probe\\shim_test.py"
+    },
+    {
+      "path": "probe/spiral_center.py",
+      "bytes": 2183,
+      "sha256": "b973eb1a84802422ffbfc45f4c7c0129c7b034afdd82f756f5399331837c1c3d",
+      "source": "C:\\ansys maxwell2024\\_probe\\spiral_center.py"
+    },
+    {
+      "path": "probe/tmpl_4chord.py",
+      "bytes": 8871,
+      "sha256": "43e733dbd5e965aaac18557845003db130b05ce282627e9e69edaaf68c582c40",
+      "source": "C:\\ansys maxwell2024\\_probe\\tmpl_4chord.py"
+    },
+    {
+      "path": "probe/tmpl_4chord2.py",
+      "bytes": 11488,
+      "sha256": "d4e57e040d5e2e3426bffe135379508683ddb73fa6cf94a7ab032f583d1692c1",
+      "source": "C:\\ansys maxwell2024\\_probe\\tmpl_4chord2.py"
+    },
+    {
+      "path": "probe/tmpl_diag.py",
+      "bytes": 2684,
+      "sha256": "fa9f6e6fd1a9f16e130e88f497c0be510b6184d0ee1f6fd10b860215e2bd942e",
+      "source": "C:\\ansys maxwell2024\\_probe\\tmpl_diag.py"
+    },
+    {
+      "path": "probe/token_diag.py",
+      "bytes": 3323,
+      "sha256": "ce2292c4f58a380a5240882694a97ec7def591e215ad82656fe97c2e66782918",
+      "source": "C:\\ansys maxwell2024\\_probe\\token_diag.py"
+    },
+    {
+      "path": "probe/token_diag2.py",
+      "bytes": 2899,
+      "sha256": "60ae821771ffc7ece48b45c27163c1d811c7b88cf6fd69b775bba95a6f264133",
+      "source": "C:\\ansys maxwell2024\\_probe\\token_diag2.py"
+    },
+    {
+      "path": "probe/token_diag3.py",
+      "bytes": 2731,
+      "sha256": "4ef78fd2a946edc1e01094fd6cb94a7df284fdf22243a499bd899d7bb8baae31",
+      "source": "C:\\ansys maxwell2024\\_probe\\token_diag3.py"
+    },
+    {
+      "path": "probe/tx1_lead_up.py",
+      "bytes": 5583,
+      "sha256": "570205566bd242aec35b4263ad3a880157bfed867e41ddb85c634c751652878f",
+      "source": "C:\\ansys maxwell2024\\_probe\\tx1_lead_up.py"
+    },
+    {
+      "path": "probe/tx_leads_out.py",
+      "bytes": 13309,
+      "sha256": "57f4467df4093fc415343340e21b4b3ad13e4b5e6fc9498c253d5574348b382a",
+      "source": "C:\\ansys maxwell2024\\_probe\\tx_leads_out.py"
+    },
+    {
+      "path": "probe/validate_b2_plan.py",
+      "bytes": 28523,
+      "sha256": "9920e3171d864b0c46449204bd0f7cd0edad2a7e92a94af418b32b916e99fcf6",
+      "source": "C:\\ansys maxwell2024\\_probe\\validate_b2_plan.py"
+    },
+    {
+      "path": "probe/validate_coilgen_patch.py",
+      "bytes": 4823,
+      "sha256": "54c1484cfe5ef59263fae552ee9e39abd30b1fa5c5044113a3da7c751bdd4a00",
+      "source": "C:\\ansys maxwell2024\\_probe\\validate_coilgen_patch.py"
+    },
+    {
+      "path": "probe/verify_4chord.py",
+      "bytes": 13959,
+      "sha256": "5da94d291267d467850307b440264fd52d7e1656d0ed62951ec61c68b4b515cd",
+      "source": "C:\\ansys maxwell2024\\_probe\\verify_4chord.py"
+    },
+    {
+      "path": "probe/verify_cores.py",
+      "bytes": 2131,
+      "sha256": "66aa1d3cc9c855bedb649c61cd31e9aab4f3c727b39fbd370f2de86df929bbef",
+      "source": "C:\\ansys maxwell2024\\_probe\\verify_cores.py"
+    },
+    {
+      "path": "probe/verify_div144.py",
+      "bytes": 3676,
+      "sha256": "026e244fd286e29ca5823dd865e2c2e31e5b773961c450e5c5ace9e4a140f2f6",
+      "source": "C:\\ansys maxwell2024\\_probe\\verify_div144.py"
+    },
+    {
+      "path": "probe/verify_lc_chain.py",
+      "bytes": 5541,
+      "sha256": "ee66194b27c5acc09a67ea8cf204a70652a78334937ca76149c14e81023e958c",
+      "source": "C:\\ansys maxwell2024\\_probe\\verify_lc_chain.py"
+    },
+    {
+      "path": "probe/verify_model_text.py",
+      "bytes": 2382,
+      "sha256": "c38f6722ad83de3e138a2944686469b8623ed16d4f76d0f9fe94163e9682421d",
+      "source": "C:\\ansys maxwell2024\\_probe\\verify_model_text.py"
+    },
+    {
+      "path": "probe/verify_patch.py",
+      "bytes": 2193,
+      "sha256": "932e24171a26bc44c6b5da6f9e33635e8ba0d0e8d97416e0155c41d99e4254fd",
+      "source": "C:\\ansys maxwell2024\\_probe\\verify_patch.py"
+    },
+    {
+      "path": "probe/verify_revert.py",
+      "bytes": 1600,
+      "sha256": "33cc9ef7c382a8b69aa0d14c85d164062851476ed1ad38925af2ca11549a271c",
+      "source": "C:\\ansys maxwell2024\\_probe\\verify_revert.py"
+    },
+    {
+      "path": "probe/verify_watchdog.py",
+      "bytes": 2159,
+      "sha256": "247af138d6e2d4b020ce3280a465465b47efb2351137bf034602aba1443a3b84",
+      "source": "C:\\ansys maxwell2024\\_probe\\verify_watchdog.py"
+    },
+    {
+      "path": "probe/why403.py",
+      "bytes": 2085,
+      "sha256": "04592aa617df737e78b86b741ca34f67920a18806295391fe74b46d96fd492f4",
+      "source": "C:\\ansys maxwell2024\\_probe\\why403.py"
+    },
+    {
+      "path": "probe/width_probe.py",
+      "bytes": 3273,
+      "sha256": "8b4d03b0e3d473d4ae33531c6227b92a71c3e521bf71bbd424ccd15d6a2bc72f",
+      "source": "C:\\ansys maxwell2024\\_probe\\width_probe.py"
+    },
+    {
+      "path": "probe/width_probe2.py",
+      "bytes": 2688,
+      "sha256": "0b036dc7c75594553f4696a12b69fbad78c9988eed9f41c00153a91ac60aecdf",
+      "source": "C:\\ansys maxwell2024\\_probe\\width_probe2.py"
+    },
+    {
+      "path": "probe/width_probe3.py",
+      "bytes": 2082,
+      "sha256": "c88511de2ed31905391cf56368459636db410fc49208576c64ddaca7fd2c8978",
+      "source": "C:\\ansys maxwell2024\\_probe\\width_probe3.py"
+    },
+    {
+      "path": "probe/worker_ab.py",
+      "bytes": 5924,
+      "sha256": "18ba7f85997898418d4f1cbfdf51f9646fcfde4d61de26e03be00b8091a707d9",
+      "source": "C:\\ansys maxwell2024\\_probe\\worker_ab.py"
+    },
+    {
+      "path": "probe/worker_e2e.py",
+      "bytes": 6576,
+      "sha256": "a9bd9405bbe716bc32293e2dbdcba78d0aa901e01bbbdc239e2d9fb51e9434fa",
+      "source": "C:\\ansys maxwell2024\\_probe\\worker_e2e.py"
+    },
+    {
+      "path": "probe/worker_solve.py",
+      "bytes": 4801,
+      "sha256": "c57d869101c52d9f58bdf1a9c728020a70308fbb95e28480ae0ec2a059454abc",
+      "source": "C:\\ansys maxwell2024\\_probe\\worker_solve.py"
+    },
+    {
+      "path": "probe/worker_sweep.py",
+      "bytes": 4623,
+      "sha256": "f151358fe7b0b7ad5257040e6ee1517765ae1c6e10844deb60823ea647c8bb88",
+      "source": "C:\\ansys maxwell2024\\_probe\\worker_sweep.py"
+    },
+    {
+      "path": "probe/wp2.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "C:\\ansys maxwell2024\\_probe\\wp2.txt"
+    },
+    {
+      "path": "docs/第二轮启动前检查清单与经验总结_20261012.md",
+      "bytes": 50034,
+      "sha256": "8970fa9494a93022470d0710c8b64eca95c94838ff1c5a8661bb6a7dd2e0814f",
+      "source": "C:\\ansys maxwell2024\\第二轮启动前检查清单与经验总结_20261012.md"
+    },
+    {
+      "path": "docs/批量仿真故障总结与经验_20260926.md",
+      "bytes": 16158,
+      "sha256": "ab88184e5b5c606b9a09a881ac82d8ae3f45bbab8e4c9fd835da0e631396bac1",
+      "source": "C:\\ansys maxwell2024\\批量仿真故障总结与经验_20260926.md"
+    },
+    {
+      "path": "docs/batch1_交付口径说明_20260919.md",
+      "bytes": 13410,
+      "sha256": "ed3645cb51f1b90a0e68fd0a5f21916ce6188adfc903a395fa22788eb15faabd",
+      "source": "C:\\ansys maxwell2024\\batch1_交付口径说明_20260919.md"
+    },
+    {
+      "path": "docs/batch规模与工期规划_20260919.md",
+      "bytes": 5429,
+      "sha256": "6421d1806e22146d3f1fa34b2b3fc5b9d93d80ed22cfdf8aedf6fc9c87f119e7",
+      "source": "C:\\ansys maxwell2024\\batch规模与工期规划_20260919.md"
+    },
+    {
+      "path": "docs/b1_delivery_README.md",
+      "bytes": 10531,
+      "sha256": "3d62f264b195342d05590412c35c4547491beef0cb7fcf3b3532f7da072625d2",
+      "source": "C:\\ansys maxwell2024\\b1_delivery_README.md"
+    },
+    {
+      "path": "docs/交接_新会话启动指引_20260919.md",
+      "bytes": 42154,
+      "sha256": "b4fc89d9d2bd8cd2e01fbd3739dcd409ffcc13f79f0d9a16a37e40abc34d2249",
+      "source": "C:\\ansys maxwell2024\\交接_新会话启动指引_20260919.md"
+    },
+    {
+      "path": "docs/拐角重映射缺陷与修正_20260919.md",
+      "bytes": 11033,
+      "sha256": "dd7d50eb7593cf2fb5396543071e3d6ba067822f623127d7178ce33e36361c28",
+      "source": "C:\\ansys maxwell2024\\拐角重映射缺陷与修正_20260919.md"
+    },
+    {
+      "path": "docs/僵死事故与自动恢复改动_20260923.md",
+      "bytes": 6805,
+      "sha256": "1924ad0136586b850826d23ec68d17e83cc1cb15374f959c6a04c7f9edc558e2",
+      "source": "C:\\ansys maxwell2024\\僵死事故与自动恢复改动_20260923.md"
+    },
+    {
+      "path": "docs/算法优化与提速汇总_20260926.md",
+      "bytes": 8804,
+      "sha256": "c754e003ccde21b12611ce07cbba2f4e736234a9cf39510eeb6ec9a8d2202d0c",
+      "source": "C:\\ansys maxwell2024\\算法优化与提速汇总_20260926.md"
+    },
+    {
+      "path": "docs/仿真采集端技术文档_20260918.md",
+      "bytes": 39701,
+      "sha256": "21ecbe7b90a8e443a5514005142a7310ba43adcd91d5d79daac7679f538222e8",
+      "source": "C:\\ansys maxwell2024\\仿真采集端技术文档_20260918.md"
+    },
+    {
+      "path": "docs/线圈LC参数化_20260916.md",
+      "bytes": 8929,
+      "sha256": "d67620385662be77bf82f6ff8201441795e9e60171beaf18cb7e85eb1c71429f",
+      "source": "C:\\ansys maxwell2024\\线圈LC参数化_20260916.md"
+    },
+    {
+      "path": "docs/核数测速对比_20260915.md",
+      "bytes": 4605,
+      "sha256": "a886ea68332b824996ec764a7d2844795e0b8fd70cfe9c7864112c97e2cf49df",
+      "source": "C:\\ansys maxwell2024\\核数测速对比_20260915.md"
+    },
+    {
+      "path": "docs/README_迁移指南.md",
+      "bytes": 4190,
+      "sha256": "bf4ae48552e4f91d51e1f615f983257e4e8f4b7d73a937311594c0c064b8b90e",
+      "source": "C:\\wpt\\README_迁移指南.md"
+    },
+    {
+      "path": "docs/README_服务器部署_Windows.md",
+      "bytes": 5885,
+      "sha256": "acf64230d7d3a545aae9a7583ac0f6b952d52b3df8e837fa779893f7930acb21",
+      "source": "C:\\wpt\\README_服务器部署_Windows.md"
+    },
+    {
+      "path": "docs/README_preflight_2025.md",
+      "bytes": 3403,
+      "sha256": "5c7e96f0107dafec2c14aebd8678edc2c935daf8fa0cc334fe14f55cce92d5a4",
+      "source": "C:\\wpt\\README_preflight_2025.md"
+    },
+    {
+      "path": "docs/路径修改清单_20260913.md",
+      "bytes": 6026,
+      "sha256": "71637d9fa5cb883ece5930de7a954c83d94e90c2b3a551b8146fcd4c0157a914",
+      "source": "C:\\wpt\\backup\\路径修改清单_20260913.md"
+    }
+  ],
+  "installer_media_on_source": [
+    "C:\\ansys maxwell2024\\1\\ANSYS.2024.R1.Electronics.Suite.Win64.iso",
+    "C:\\ansys maxwell2024\\1\\LicenseManager安装包_2024R1_WINX64.iso"
+  ]
+}

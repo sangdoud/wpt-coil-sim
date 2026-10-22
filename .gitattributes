@@ -1,0 +1,12 @@
+# 关闭全部自动转换：本项目靠 SHA256 校验迁移完整性（verify_pack.py），
+# 任何换行/编码转换都会让校验失去意义。
+* -text -diff
+
+# 二进制资产显式声明
+*.aedt      binary
+*.aedtresults/**  binary
+*.iso       binary
+*.zip       binary
+*.png       binary
+*.xlsx      binary
+*.docx      binary

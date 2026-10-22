@@ -1,0 +1,343 @@
+{
+ "batch": "b2",
+ "n_cases": 1920,
+ "n_opt": 1671,
+ "n_base": 249,
+ "box_x": 420.0,
+ "box_x_required": 423.47,
+ "box_x_suggest": 430.0,
+ "margin": 40.0,
+ "path_mode": "ring",
+ "box_margin_waiver": "A/B 实测证据（_probe\\ab_box_margin_20261012.py，2026-10-12）：最坏工况 b2_0643 在最远扫描点 x=+271.493 上，X±420 vs X±440 得 L11/L22 差 0.086%、L33 差 1.715%、M12/M13/k13 差 0.000%、M23 差 0.136%；A/A 对照（同盒跑两遍）全部 0.000%，证明求解完全可复现、差异非网格噪声。按 20mm->1.715% 线性折算，本批最大越界 3.47mm 对应 L33(极值点) 约 0.30% 系统偏差，落在本批已有误差预算（OPT/BASE 口径混合 0.25~0.4%）之内；且 5 个工况物体仍在盒内 36.5~39mm，ensure_region() 硬判据不触发、解不会被截断。故照跑全量并在交付说明记录。",
+ "box_margin_waiver_cases": 2,
+ "opt_min_gap": 1.5,
+ "n_half": 21,
+ "n_full": 41,
+ "t_case_min_opt": 105.4,
+ "t_case_min_base": 290.8,
+ "timing_source": "工期按 b1 生产实测单工况均值 172.4 min 估算；先验常数 4.78/13.61 min/点 仅供工况排序参考（用于工期会低估约 1.64 倍）",
+ "total_case_min": 248532.6,
+ "single_instance_hours": 4142.2,
+ "wall_days_8inst": 21.57,
+ "wall_days_8inst_measured": 28.73,
+ "n_points_out_of_box": 0,
+ "y_ok": true,
+ "validation": [
+  {
+   "case_id": "b2_0981",
+   "why": "coil_size 最小",
+   "t_case_min": 105.4,
+   "gap_min": 1.7697,
+   "sweep_span": 224.6371
+  },
+  {
+   "case_id": "b2_1539",
+   "why": "coil_size 最大",
+   "t_case_min": 105.4,
+   "gap_min": 4.2751,
+   "sweep_span": 386.9494
+  },
+  {
+   "case_id": "b2_0087",
+   "why": "hole_ratio 最小",
+   "t_case_min": 105.4,
+   "gap_min": 4.0633,
+   "sweep_span": 472.6173
+  },
+  {
+   "case_id": "b2_0890",
+   "why": "hole_ratio 最大",
+   "t_case_min": 105.4,
+   "gap_min": 1.8542,
+   "sweep_span": 397.5424
+  },
+  {
+   "case_id": "b2_0470",
+   "why": "tx_fill 最小",
+   "t_case_min": 105.4,
+   "gap_min": 2.1824,
+   "sweep_span": 373.2177
+  },
+  {
+   "case_id": "b2_1725",
+   "why": "tx_fill 最大",
+   "t_case_min": 105.4,
+   "gap_min": 2.0414,
+   "sweep_span": 330.847
+  },
+  {
+   "case_id": "b2_1526",
+   "why": "rx_fill 最小",
+   "t_case_min": 105.4,
+   "gap_min": 2.8428,
+   "sweep_span": 461.7016
+  },
+  {
+   "case_id": "b2_1303",
+   "why": "rx_fill 最大",
+   "t_case_min": 105.4,
+   "gap_min": 3.7679,
+   "sweep_span": 397.8966
+  },
+  {
+   "case_id": "b2_0502",
+   "why": "tx_thick 最小",
+   "t_case_min": 105.4,
+   "gap_min": 3.4029,
+   "sweep_span": 485.746
+  },
+  {
+   "case_id": "b2_0377",
+   "why": "tx_thick 最大",
+   "t_case_min": 105.4,
+   "gap_min": 3.0173,
+   "sweep_span": 333.5978
+  },
+  {
+   "case_id": "b2_0972",
+   "why": "rx_thick 最小",
+   "t_case_min": 290.8,
+   "gap_min": 0.9849,
+   "sweep_span": 216.0601
+  },
+  {
+   "case_id": "b2_0127",
+   "why": "rx_thick 最大",
+   "t_case_min": 105.4,
+   "gap_min": 3.3784,
+   "sweep_span": 294.6353
+  },
+  {
+   "case_id": "b2_0835",
+   "why": "spacing_ratio 最小",
+   "t_case_min": 105.4,
+   "gap_min": 4.8664,
+   "sweep_span": 326.2414
+  },
+  {
+   "case_id": "b2_0360",
+   "why": "spacing_ratio 最大",
+   "t_case_min": 105.4,
+   "gap_min": 1.8087,
+   "sweep_span": 402.8142
+  },
+  {
+   "case_id": "b2_0556",
+   "why": "gap_min 最小(必走 BASE)",
+   "t_case_min": 290.8,
+   "gap_min": 0.5373,
+   "sweep_span": 211.7609
+  },
+  {
+   "case_id": "b2_1644",
+   "why": "gap_min 最小(必走 BASE)",
+   "t_case_min": 290.8,
+   "gap_min": 0.6171,
+   "sweep_span": 264.8622
+  },
+  {
+   "case_id": "b2_0940",
+   "why": "gap_min 最小(必走 BASE)",
+   "t_case_min": 290.8,
+   "gap_min": 0.6231,
+   "sweep_span": 241.543
+  },
+  {
+   "case_id": "b2_1900",
+   "why": "gap_min 最小(必走 BASE)",
+   "t_case_min": 290.8,
+   "gap_min": 0.6343,
+   "sweep_span": 269.3481
+  },
+  {
+   "case_id": "b2_1100",
+   "why": "gap_min 最小(必走 BASE)",
+   "t_case_min": 290.8,
+   "gap_min": 0.6548,
+   "sweep_span": 282.9349
+  },
+  {
+   "case_id": "b2_0012",
+   "why": "gap_min 最小(必走 BASE)",
+   "t_case_min": 290.8,
+   "gap_min": 0.6672,
+   "sweep_span": 205.9446
+  },
+  {
+   "case_id": "b2_1324",
+   "why": "gap_min 最小(必走 BASE)",
+   "t_case_min": 290.8,
+   "gap_min": 0.6678,
+   "sweep_span": 187.6919
+  },
+  {
+   "case_id": "b2_1420",
+   "why": "gap_min 最小(必走 BASE)",
+   "t_case_min": 290.8,
+   "gap_min": 0.6801,
+   "sweep_span": 198.04
+  },
+  {
+   "case_id": "b2_0643",
+   "why": "sweep_span 最大补足",
+   "t_case_min": 105.4,
+   "gap_min": 4.4477,
+   "sweep_span": 542.987
+  },
+  {
+   "case_id": "b2_1790",
+   "why": "sweep_span 最大补足",
+   "t_case_min": 105.4,
+   "gap_min": 2.7311,
+   "sweep_span": 542.0526
+  },
+  {
+   "case_id": "b2_0190",
+   "why": "sweep_span 最大补足",
+   "t_case_min": 105.4,
+   "gap_min": 3.9449,
+   "sweep_span": 536.8017
+  },
+  {
+   "case_id": "b2_1219",
+   "why": "sweep_span 最大补足",
+   "t_case_min": 105.4,
+   "gap_min": 4.5356,
+   "sweep_span": 536.3996
+  },
+  {
+   "case_id": "b2_0414",
+   "why": "sweep_span 最大补足",
+   "t_case_min": 105.4,
+   "gap_min": 2.9578,
+   "sweep_span": 535.5329
+  },
+  {
+   "case_id": "b2_1886",
+   "why": "sweep_span 最大补足",
+   "t_case_min": 105.4,
+   "gap_min": 2.8981,
+   "sweep_span": 535.0734
+  },
+  {
+   "case_id": "b2_1507",
+   "why": "sweep_span 最大补足",
+   "t_case_min": 105.4,
+   "gap_min": 4.0377,
+   "sweep_span": 533.9422
+  },
+  {
+   "case_id": "b2_0990",
+   "why": "sweep_span 最大补足",
+   "t_case_min": 105.4,
+   "gap_min": 3.4951,
+   "sweep_span": 527.6589
+  },
+  {
+   "case_id": "b2_1347",
+   "why": "sweep_span 最大补足",
+   "t_case_min": 105.4,
+   "gap_min": 4.092,
+   "sweep_span": 526.1818
+  },
+  {
+   "case_id": "b2_0275",
+   "why": "sweep_span 最大补足",
+   "t_case_min": 105.4,
+   "gap_min": 4.4862,
+   "sweep_span": 526.0559
+  }
+ ],
+ "order_head": [
+  "b2_0981",
+  "b2_1539",
+  "b2_0087",
+  "b2_0890",
+  "b2_0470",
+  "b2_1725",
+  "b2_1526",
+  "b2_1303",
+  "b2_0502",
+  "b2_0377",
+  "b2_0972",
+  "b2_0127",
+  "b2_0835",
+  "b2_0360",
+  "b2_0556",
+  "b2_1644",
+  "b2_0940",
+  "b2_1900",
+  "b2_1100",
+  "b2_0012",
+  "b2_1324",
+  "b2_1420",
+  "b2_0643",
+  "b2_1790",
+  "b2_0190",
+  "b2_1219",
+  "b2_0414",
+  "b2_1886",
+  "b2_1507",
+  "b2_0990",
+  "b2_1347",
+  "b2_0275",
+  "b2_1704",
+  "b2_1008",
+  "b2_0576",
+  "b2_0848",
+  "b2_0720",
+  "b2_1536",
+  "b2_0624",
+  "b2_0836"
+ ],
+ "validate_summary": {
+  "ok": 9,
+  "warn": 1,
+  "fail": 0,
+  "checks": [
+   {
+    "status": "OK",
+    "title": "1 文件存在性/解析/BOM"
+   },
+   {
+    "status": "OK",
+    "title": "2 列名"
+   },
+   {
+    "status": "OK",
+    "title": "3 数值可解析性(NaN/Inf/空值)"
+   },
+   {
+    "status": "OK",
+    "title": "4 case_id 唯一性/前缀"
+   },
+   {
+    "status": "OK",
+    "title": "5 行数"
+   },
+   {
+    "status": "OK",
+    "title": "6 合法域读取"
+   },
+   {
+    "status": "OK",
+    "title": "6 7 维范围"
+   },
+   {
+    "status": "WARN",
+    "title": "7 几何核查(X/Y 盒)"
+   },
+   {
+    "status": "OK",
+    "title": "8 分布/闸门/工期"
+   },
+   {
+    "status": "OK",
+    "title": "9 冻结口径"
+   }
+  ]
+ },
+ "audit_missing_cols": [],
+ "audit_blank_cols": [],
+ "src": "C:\\ansys maxwell2024\\_work\\b2\\b2_source_samples.csv"
+}
