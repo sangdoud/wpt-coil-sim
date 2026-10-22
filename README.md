@@ -33,3 +33,9 @@ MANIFEST.json  迁移包 SHA256 清单（新机 clone 后校验用）
 | `work/ref/b1_plan.csv` | batch1 样板 | b1_0001 ~ b1_0256（256 组） | 已处理 |
 
 > 参数表列（契约固定）：`case_id, coil_size, hole_ratio, tx_fill, rx_fill, tx_thick, rx_thick, spacing_ratio`
+
+## shard2b 批次在目标设备 B 的部署
+
+本批（shard2b，`b2_2881~b2_3840`，960 组）在目标设备 B 上的完整部署与批量仿真步骤，
+见 **《shard2b批次部署执行手册.md》**（本仓库根目录）。要点：批次名保持 `b2`（跳过 rename）、
+`--rows 960`、8 实例沿用源机 b2 口径。
